@@ -538,56 +538,56 @@ var DataTableBodyComponent = (function () {
     DataTableBodyComponent.prototype.getRowIndex = function (row) {
         return this.rowIndexes.get(row) || 0;
     };
-    DataTableBodyComponent.decorators = [
-        { type: core_1.Component, args: [{
-                    selector: 'datatable-body',
-                    template: "\n    <datatable-selection\n      #selector\n      [selected]=\"selected\"\n      [rows]=\"rows\"\n      [selectCheck]=\"selectCheck\"\n      [selectEnabled]=\"selectEnabled\"\n      [selectionType]=\"selectionType\"\n      [rowIdentity]=\"rowIdentity\"\n      (select)=\"select.emit($event)\"\n      (activate)=\"activate.emit($event)\">\n      <datatable-progress\n        *ngIf=\"loadingIndicator\">\n      </datatable-progress>\n      <datatable-scroller\n        *ngIf=\"rows?.length\"\n        [scrollbarV]=\"scrollbarV\"\n        [scrollbarH]=\"scrollbarH\"\n        [scrollHeight]=\"scrollHeight\"\n        [scrollWidth]=\"columnGroupWidths.total\"\n        (scroll)=\"onBodyScroll($event)\">\n        <datatable-row-wrapper\n          [groupedRows]=\"groupedRows\"\n          *ngFor=\"let group of temp; let i = index; trackBy: rowTrackingFn;\"\n          [innerWidth]=\"innerWidth\"\n          [ngStyle]=\"getRowsStyles(group)\"\n          [rowDetail]=\"rowDetail\"\n          [groupHeader]=\"groupHeader\"\n          [offsetX]=\"offsetX\"\n          [detailRowHeight]=\"getDetailRowHeight(group[i],i)\"\n          [row]=\"group\"\n          [expanded]=\"getRowExpanded(group)\"\n          [rowIndex]=\"getRowIndex(group[i])\"\n          (rowContextmenu)=\"rowContextmenu.emit($event)\">\n          <datatable-body-row \n            *ngIf=\"!groupedRows; else groupedRowsTemplate\"        \n            tabindex=\"-1\"\n            [isSelected]=\"selector.getRowSelected(group)\"\n            [innerWidth]=\"innerWidth\"\n            [offsetX]=\"offsetX\"\n            [columns]=\"columns\"\n            [rowHeight]=\"getRowHeight(group)\"\n            [row]=\"group\"\n            [rowIndex]=\"getRowIndex(group)\"\n            [expanded]=\"getRowExpanded(group)\"            \n            [rowClass]=\"rowClass\"\n            (activate)=\"selector.onActivate($event, indexes.first + i)\">\n          </datatable-body-row>\n          <ng-template #groupedRowsTemplate>\n            <datatable-body-row\n              *ngFor=\"let row of group.value; let i = index; trackBy: rowTrackingFn;\"\n              tabindex=\"-1\"\n              [isSelected]=\"selector.getRowSelected(row)\"\n              [innerWidth]=\"innerWidth\"\n              [offsetX]=\"offsetX\"\n              [columns]=\"columns\"\n              [rowHeight]=\"getRowHeight(row)\"\n              [row]=\"row\"\n              [group]=\"group.value\"\n              [rowIndex]=\"getRowIndex(row)\"\n              [expanded]=\"getRowExpanded(row)\"\n              [rowClass]=\"rowClass\"\n              (activate)=\"selector.onActivate($event, i)\">\n            </datatable-body-row>\n          </ng-template>\n        </datatable-row-wrapper>\n      </datatable-scroller>\n      <div\n        class=\"empty-row\"\n        *ngIf=\"!rows?.length\"\n        [innerHTML]=\"emptyMessage\">\n      </div>\n    </datatable-selection>\n  ",
-                    changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-                    host: {
-                        class: 'datatable-body'
-                    }
-                },] },
-    ];
-    /** @nocollapse */
-    DataTableBodyComponent.ctorParameters = function () { return [
-        { type: core_1.ChangeDetectorRef, },
-    ]; };
-    DataTableBodyComponent.propDecorators = {
-        'scrollbarV': [{ type: core_1.Input },],
-        'scrollbarH': [{ type: core_1.Input },],
-        'loadingIndicator': [{ type: core_1.Input },],
-        'externalPaging': [{ type: core_1.Input },],
-        'rowHeight': [{ type: core_1.Input },],
-        'offsetX': [{ type: core_1.Input },],
-        'emptyMessage': [{ type: core_1.Input },],
-        'selectionType': [{ type: core_1.Input },],
-        'selected': [{ type: core_1.Input },],
-        'rowIdentity': [{ type: core_1.Input },],
-        'rowDetail': [{ type: core_1.Input },],
-        'groupHeader': [{ type: core_1.Input },],
-        'selectCheck': [{ type: core_1.Input },],
-        'trackByProp': [{ type: core_1.Input },],
-        'rowClass': [{ type: core_1.Input },],
-        'groupedRows': [{ type: core_1.Input },],
-        'groupExpansionDefault': [{ type: core_1.Input },],
-        'innerWidth': [{ type: core_1.Input },],
-        'groupRowsBy': [{ type: core_1.Input },],
-        'pageSize': [{ type: core_1.Input },],
-        'rows': [{ type: core_1.Input },],
-        'columns': [{ type: core_1.Input },],
-        'offset': [{ type: core_1.Input },],
-        'rowCount': [{ type: core_1.Input },],
-        'bodyWidth': [{ type: core_1.HostBinding, args: ['style.width',] },],
-        'bodyHeight': [{ type: core_1.Input }, { type: core_1.HostBinding, args: ['style.height',] },],
-        'scroll': [{ type: core_1.Output },],
-        'page': [{ type: core_1.Output },],
-        'activate': [{ type: core_1.Output },],
-        'select': [{ type: core_1.Output },],
-        'detailToggle': [{ type: core_1.Output },],
-        'rowContextmenu': [{ type: core_1.Output },],
-        'scroller': [{ type: core_1.ViewChild, args: [scroller_component_1.ScrollerComponent,] },],
-    };
     return DataTableBodyComponent;
 }());
+DataTableBodyComponent.decorators = [
+    { type: core_1.Component, args: [{
+                selector: 'datatable-body',
+                template: "\n    <datatable-selection\n      #selector\n      [selected]=\"selected\"\n      [rows]=\"rows\"\n      [selectCheck]=\"selectCheck\"\n      [selectEnabled]=\"selectEnabled\"\n      [selectionType]=\"selectionType\"\n      [rowIdentity]=\"rowIdentity\"\n      (select)=\"select.emit($event)\"\n      (activate)=\"activate.emit($event)\">\n      <datatable-progress\n        *ngIf=\"loadingIndicator\">\n      </datatable-progress>\n      <datatable-scroller\n        *ngIf=\"rows?.length\"\n        [scrollbarV]=\"scrollbarV\"\n        [scrollbarH]=\"scrollbarH\"\n        [scrollHeight]=\"scrollHeight\"\n        [scrollWidth]=\"columnGroupWidths.total\"\n        (scroll)=\"onBodyScroll($event)\">\n        <datatable-row-wrapper\n          [groupedRows]=\"groupedRows\"\n          *ngFor=\"let group of temp; let i = index; trackBy: rowTrackingFn;\"\n          [innerWidth]=\"innerWidth\"\n          [ngStyle]=\"getRowsStyles(group)\"\n          [rowDetail]=\"rowDetail\"\n          [groupHeader]=\"groupHeader\"\n          [offsetX]=\"offsetX\"\n          [detailRowHeight]=\"getDetailRowHeight(group[i],i)\"\n          [row]=\"group\"\n          [expanded]=\"getRowExpanded(group)\"\n          [rowIndex]=\"getRowIndex(group[i])\"\n          (rowContextmenu)=\"rowContextmenu.emit($event)\">\n          <datatable-body-row \n            *ngIf=\"!groupedRows; else groupedRowsTemplate\"        \n            tabindex=\"-1\"\n            [isSelected]=\"selector.getRowSelected(group)\"\n            [innerWidth]=\"innerWidth\"\n            [offsetX]=\"offsetX\"\n            [columns]=\"columns\"\n            [rowHeight]=\"getRowHeight(group)\"\n            [row]=\"group\"\n            [rowIndex]=\"getRowIndex(group)\"\n            [expanded]=\"getRowExpanded(group)\"            \n            [rowClass]=\"rowClass\"\n            (activate)=\"selector.onActivate($event, indexes.first + i)\">\n          </datatable-body-row>\n          <ng-template #groupedRowsTemplate>\n            <datatable-body-row\n              *ngFor=\"let row of group.value; let i = index; trackBy: rowTrackingFn;\"\n              tabindex=\"-1\"\n              [isSelected]=\"selector.getRowSelected(row)\"\n              [innerWidth]=\"innerWidth\"\n              [offsetX]=\"offsetX\"\n              [columns]=\"columns\"\n              [rowHeight]=\"getRowHeight(row)\"\n              [row]=\"row\"\n              [group]=\"group.value\"\n              [rowIndex]=\"getRowIndex(row)\"\n              [expanded]=\"getRowExpanded(row)\"\n              [rowClass]=\"rowClass\"\n              (activate)=\"selector.onActivate($event, i)\">\n            </datatable-body-row>\n          </ng-template>\n        </datatable-row-wrapper>\n      </datatable-scroller>\n      <div\n        class=\"empty-row\"\n        *ngIf=\"!rows?.length\"\n        [innerHTML]=\"emptyMessage\">\n      </div>\n    </datatable-selection>\n  ",
+                changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+                host: {
+                    class: 'datatable-body'
+                }
+            },] },
+];
+/** @nocollapse */
+DataTableBodyComponent.ctorParameters = function () { return [
+    { type: core_1.ChangeDetectorRef, },
+]; };
+DataTableBodyComponent.propDecorators = {
+    'scrollbarV': [{ type: core_1.Input },],
+    'scrollbarH': [{ type: core_1.Input },],
+    'loadingIndicator': [{ type: core_1.Input },],
+    'externalPaging': [{ type: core_1.Input },],
+    'rowHeight': [{ type: core_1.Input },],
+    'offsetX': [{ type: core_1.Input },],
+    'emptyMessage': [{ type: core_1.Input },],
+    'selectionType': [{ type: core_1.Input },],
+    'selected': [{ type: core_1.Input },],
+    'rowIdentity': [{ type: core_1.Input },],
+    'rowDetail': [{ type: core_1.Input },],
+    'groupHeader': [{ type: core_1.Input },],
+    'selectCheck': [{ type: core_1.Input },],
+    'trackByProp': [{ type: core_1.Input },],
+    'rowClass': [{ type: core_1.Input },],
+    'groupedRows': [{ type: core_1.Input },],
+    'groupExpansionDefault': [{ type: core_1.Input },],
+    'innerWidth': [{ type: core_1.Input },],
+    'groupRowsBy': [{ type: core_1.Input },],
+    'pageSize': [{ type: core_1.Input },],
+    'rows': [{ type: core_1.Input },],
+    'columns': [{ type: core_1.Input },],
+    'offset': [{ type: core_1.Input },],
+    'rowCount': [{ type: core_1.Input },],
+    'bodyWidth': [{ type: core_1.HostBinding, args: ['style.width',] },],
+    'bodyHeight': [{ type: core_1.Input }, { type: core_1.HostBinding, args: ['style.height',] },],
+    'scroll': [{ type: core_1.Output },],
+    'page': [{ type: core_1.Output },],
+    'activate': [{ type: core_1.Output },],
+    'select': [{ type: core_1.Output },],
+    'detailToggle': [{ type: core_1.Output },],
+    'rowContextmenu': [{ type: core_1.Output },],
+    'scroller': [{ type: core_1.ViewChild, args: [scroller_component_1.ScrollerComponent,] },],
+};
 exports.DataTableBodyComponent = DataTableBodyComponent;
 //# sourceMappingURL=body.component.js.map

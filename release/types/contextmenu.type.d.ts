@@ -1,4 +1,4 @@
-export declare enum ContextmenuType {
-    header = "header",
-    body = "body",
+export declare class ContextmenuType {
+    static header: string;
+    static body: string;
 }

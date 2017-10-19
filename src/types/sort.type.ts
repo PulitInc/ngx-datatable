@@ -1,4 +1,4 @@
-export enum SortType {
-  single = 'single',
-  multi = 'multi'
+export class SortType {
+  public static single = 'single';
+  public static multi = 'multi';
 }

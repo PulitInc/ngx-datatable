@@ -1,4 +1,4 @@
-export declare enum SortType {
-    single = "single",
-    multi = "multi",
+export declare class SortType {
+    static single: string;
+    static multi: string;
 }

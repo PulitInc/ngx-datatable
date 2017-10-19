@@ -1,4 +1,4 @@
-export enum SortDirection {
-  asc = 'asc',
-  desc = 'desc'
+export class SortDirection {
+  public static asc = 'asc';
+  public static desc = 'desc';
 }

@@ -41,17 +41,17 @@ var DatatableGroupHeaderDirective = (function () {
             value: false
         });
     };
-    DatatableGroupHeaderDirective.decorators = [
-        { type: core_1.Directive, args: [{ selector: 'ngx-datatable-group-header' },] },
-    ];
-    /** @nocollapse */
-    DatatableGroupHeaderDirective.ctorParameters = function () { return []; };
-    DatatableGroupHeaderDirective.propDecorators = {
-        'rowHeight': [{ type: core_1.Input },],
-        'template': [{ type: core_1.Input }, { type: core_1.ContentChild, args: [body_group_header_template_directive_1.DatatableGroupHeaderTemplateDirective, { read: core_1.TemplateRef },] },],
-        'toggle': [{ type: core_1.Output },],
-    };
     return DatatableGroupHeaderDirective;
 }());
+DatatableGroupHeaderDirective.decorators = [
+    { type: core_1.Directive, args: [{ selector: 'ngx-datatable-group-header' },] },
+];
+/** @nocollapse */
+DatatableGroupHeaderDirective.ctorParameters = function () { return []; };
+DatatableGroupHeaderDirective.propDecorators = {
+    'rowHeight': [{ type: core_1.Input },],
+    'template': [{ type: core_1.Input }, { type: core_1.ContentChild, args: [body_group_header_template_directive_1.DatatableGroupHeaderTemplateDirective, { read: core_1.TemplateRef },] },],
+    'toggle': [{ type: core_1.Output },],
+};
 exports.DatatableGroupHeaderDirective = DatatableGroupHeaderDirective;
 //# sourceMappingURL=body-group-header.directive.js.map

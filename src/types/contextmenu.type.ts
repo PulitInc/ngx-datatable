@@ -1,4 +1,4 @@
-export enum ContextmenuType {
-  header = 'header',
-  body = 'body'
+export class ContextmenuType {
+  public static header = 'header';
+  public static body = 'body';
 }

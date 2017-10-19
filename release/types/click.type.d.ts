@@ -1,4 +1,4 @@
-export declare enum ClickType {
-    single = "single",
-    double = "double",
+export declare class ClickType {
+    static single: string;
+    static double: string;
 }

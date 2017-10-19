@@ -1,7 +1,7 @@
-export declare enum SelectionType {
-    single = "single",
-    multi = "multi",
-    multiClick = "multiClick",
-    cell = "cell",
-    checkbox = "checkbox",
+export declare class SelectionType {
+    static single: string;
+    static multi: string;
+    static multiClick: string;
+    static cell: string;
+    static checkbox: string;
 }

@@ -230,7 +230,7 @@ var root_1 = __webpack_require__("./node_modules/rxjs/util/root.js");
 var toSubscriber_1 = __webpack_require__("./node_modules/rxjs/util/toSubscriber.js");
 var observable_1 = __webpack_require__("./node_modules/rxjs/symbol/observable.js");
 /**
- * A representation of any set of values over any amount of time. This the most basic building block
+ * A representation of any set of values over any amount of time. This is the most basic building block
  * of RxJS.
  *
  * @class Observable<T>
@@ -238,7 +238,7 @@ var observable_1 = __webpack_require__("./node_modules/rxjs/symbol/observable.js
 var Observable = (function () {
     /**
      * @constructor
-     * @param {Function} subscribe the function that is  called when the Observable is
+     * @param {Function} subscribe the function that is called when the Observable is
      * initially subscribed to. This function is given a Subscriber, to which new values
      * can be `next`ed, or an `error` method can be called to raise an error, or
      * `complete` can be called to notify of a successful completion.
@@ -267,7 +267,7 @@ var Observable = (function () {
      *
      * <span class="informal">Use it when you have all these Observables, but still nothing is happening.</span>
      *
-     * `subscribe` is not a regular operator, but a method that calls Observables internal `subscribe` function. It
+     * `subscribe` is not a regular operator, but a method that calls Observable's internal `subscribe` function. It
      * might be for example a function that you passed to a {@link create} static factory, but most of the time it is
      * a library implementation, which defines what and when will be emitted by an Observable. This means that calling
      * `subscribe` is actually the moment when Observable starts its work, not when it is created, as it is often
@@ -309,7 +309,7 @@ var Observable = (function () {
      *     console.log('Adding: ' + value);
      *     this.sum = this.sum + value;
      *   },
-     *   error() { // We actually could just remote this method,
+     *   error() { // We actually could just remove this method,
      *   },        // since we do not really care about errors right now.
      *   complete() {
      *     console.log('Sum equals: ' + this.sum);
@@ -364,7 +364,7 @@ var Observable = (function () {
      * // Logs:
      * // 0 after 1s
      * // 1 after 2s
-     * // "unsubscribed!" after 2,5s
+     * // "unsubscribed!" after 2.5s
      *
      *
      * @param {Observer|Function} observerOrNext (optional) Either an observer with methods to be called,
@@ -1967,109 +1967,109 @@ var DataTableBodyCellComponent = (function () {
             return html;
         return html.replace(/<\/?[^>]+(>|$)/g, '');
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [Object])
-    ], DataTableBodyCellComponent.prototype, "group", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [Number])
-    ], DataTableBodyCellComponent.prototype, "rowHeight", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean),
-        __metadata("design:paramtypes", [Boolean])
-    ], DataTableBodyCellComponent.prototype, "isSelected", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean),
-        __metadata("design:paramtypes", [Boolean])
-    ], DataTableBodyCellComponent.prototype, "expanded", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [Number])
-    ], DataTableBodyCellComponent.prototype, "rowIndex", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [Object])
-    ], DataTableBodyCellComponent.prototype, "column", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [Object])
-    ], DataTableBodyCellComponent.prototype, "row", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Array),
-        __metadata("design:paramtypes", [Array])
-    ], DataTableBodyCellComponent.prototype, "sorts", null);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DataTableBodyCellComponent.prototype, "activate", void 0);
-    __decorate([
-        core_1.ViewChild('cellTemplate', { read: core_1.ViewContainerRef }),
-        __metadata("design:type", core_1.ViewContainerRef)
-    ], DataTableBodyCellComponent.prototype, "cellTemplate", void 0);
-    __decorate([
-        core_1.HostBinding('class'),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [])
-    ], DataTableBodyCellComponent.prototype, "columnCssClasses", null);
-    __decorate([
-        core_1.HostBinding('style.width.px'),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [])
-    ], DataTableBodyCellComponent.prototype, "width", null);
-    __decorate([
-        core_1.HostBinding('style.height'),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [])
-    ], DataTableBodyCellComponent.prototype, "height", null);
-    __decorate([
-        core_1.HostListener('focus'),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], DataTableBodyCellComponent.prototype, "onFocus", null);
-    __decorate([
-        core_1.HostListener('blur'),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], DataTableBodyCellComponent.prototype, "onBlur", null);
-    __decorate([
-        core_1.HostListener('click', ['$event']),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [MouseEvent]),
-        __metadata("design:returntype", void 0)
-    ], DataTableBodyCellComponent.prototype, "onClick", null);
-    __decorate([
-        core_1.HostListener('dblclick', ['$event']),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [MouseEvent]),
-        __metadata("design:returntype", void 0)
-    ], DataTableBodyCellComponent.prototype, "onDblClick", null);
-    __decorate([
-        core_1.HostListener('keydown', ['$event']),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [KeyboardEvent]),
-        __metadata("design:returntype", void 0)
-    ], DataTableBodyCellComponent.prototype, "onKeyDown", null);
-    DataTableBodyCellComponent = __decorate([
-        core_1.Component({
-            selector: 'datatable-body-cell',
-            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            template: "\n    <div class=\"datatable-body-cell-label\">\n      <label\n        *ngIf=\"column.checkboxable\"\n        class=\"datatable-checkbox\">\n        <input\n          type=\"checkbox\"\n          [checked]=\"isSelected\"\n          (click)=\"onCheckboxChange($event)\"\n        />\n      </label>\n      <span\n        *ngIf=\"!column.cellTemplate\"\n        [title]=\"sanitizedValue\"\n        [innerHTML]=\"value\">\n      </span>\n      <ng-template #cellTemplate\n        *ngIf=\"column.cellTemplate\"\n        [ngTemplateOutlet]=\"column.cellTemplate\"\n        [ngTemplateOutletContext]=\"cellContext\">\n      </ng-template>\n    </div>\n  "
-        }),
-        __metadata("design:paramtypes", [core_1.ElementRef, core_1.ChangeDetectorRef])
-    ], DataTableBodyCellComponent);
     return DataTableBodyCellComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [Object])
+], DataTableBodyCellComponent.prototype, "group", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Number])
+], DataTableBodyCellComponent.prototype, "rowHeight", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Boolean])
+], DataTableBodyCellComponent.prototype, "isSelected", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Boolean])
+], DataTableBodyCellComponent.prototype, "expanded", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Number])
+], DataTableBodyCellComponent.prototype, "rowIndex", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [Object])
+], DataTableBodyCellComponent.prototype, "column", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [Object])
+], DataTableBodyCellComponent.prototype, "row", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array),
+    __metadata("design:paramtypes", [Array])
+], DataTableBodyCellComponent.prototype, "sorts", null);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DataTableBodyCellComponent.prototype, "activate", void 0);
+__decorate([
+    core_1.ViewChild('cellTemplate', { read: core_1.ViewContainerRef }),
+    __metadata("design:type", core_1.ViewContainerRef)
+], DataTableBodyCellComponent.prototype, "cellTemplate", void 0);
+__decorate([
+    core_1.HostBinding('class'),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [])
+], DataTableBodyCellComponent.prototype, "columnCssClasses", null);
+__decorate([
+    core_1.HostBinding('style.width.px'),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [])
+], DataTableBodyCellComponent.prototype, "width", null);
+__decorate([
+    core_1.HostBinding('style.height'),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [])
+], DataTableBodyCellComponent.prototype, "height", null);
+__decorate([
+    core_1.HostListener('focus'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], DataTableBodyCellComponent.prototype, "onFocus", null);
+__decorate([
+    core_1.HostListener('blur'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], DataTableBodyCellComponent.prototype, "onBlur", null);
+__decorate([
+    core_1.HostListener('click', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [MouseEvent]),
+    __metadata("design:returntype", void 0)
+], DataTableBodyCellComponent.prototype, "onClick", null);
+__decorate([
+    core_1.HostListener('dblclick', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [MouseEvent]),
+    __metadata("design:returntype", void 0)
+], DataTableBodyCellComponent.prototype, "onDblClick", null);
+__decorate([
+    core_1.HostListener('keydown', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [KeyboardEvent]),
+    __metadata("design:returntype", void 0)
+], DataTableBodyCellComponent.prototype, "onKeyDown", null);
+DataTableBodyCellComponent = __decorate([
+    core_1.Component({
+        selector: 'datatable-body-cell',
+        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+        template: "\n    <div class=\"datatable-body-cell-label\">\n      <label\n        *ngIf=\"column.checkboxable\"\n        class=\"datatable-checkbox\">\n        <input\n          type=\"checkbox\"\n          [checked]=\"isSelected\"\n          (click)=\"onCheckboxChange($event)\"\n        />\n      </label>\n      <span\n        *ngIf=\"!column.cellTemplate\"\n        [title]=\"sanitizedValue\"\n        [innerHTML]=\"value\">\n      </span>\n      <ng-template #cellTemplate\n        *ngIf=\"column.cellTemplate\"\n        [ngTemplateOutlet]=\"column.cellTemplate\"\n        [ngTemplateOutletContext]=\"cellContext\">\n      </ng-template>\n    </div>\n  "
+    }),
+    __metadata("design:paramtypes", [core_1.ElementRef, core_1.ChangeDetectorRef])
+], DataTableBodyCellComponent);
 exports.DataTableBodyCellComponent = DataTableBodyCellComponent;
 
 
@@ -2095,14 +2095,14 @@ var DatatableGroupHeaderTemplateDirective = (function () {
     function DatatableGroupHeaderTemplateDirective(template) {
         this.template = template;
     }
-    DatatableGroupHeaderTemplateDirective = __decorate([
-        core_1.Directive({
-            selector: '[ngx-datatable-group-header-template]'
-        }),
-        __metadata("design:paramtypes", [core_1.TemplateRef])
-    ], DatatableGroupHeaderTemplateDirective);
     return DatatableGroupHeaderTemplateDirective;
 }());
+DatatableGroupHeaderTemplateDirective = __decorate([
+    core_1.Directive({
+        selector: '[ngx-datatable-group-header-template]'
+    }),
+    __metadata("design:paramtypes", [core_1.TemplateRef])
+], DatatableGroupHeaderTemplateDirective);
 exports.DatatableGroupHeaderTemplateDirective = DatatableGroupHeaderTemplateDirective;
 
 
@@ -2164,24 +2164,24 @@ var DatatableGroupHeaderDirective = (function () {
             value: false
         });
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DatatableGroupHeaderDirective.prototype, "rowHeight", void 0);
-    __decorate([
-        core_1.Input(),
-        core_1.ContentChild(body_group_header_template_directive_1.DatatableGroupHeaderTemplateDirective, { read: core_1.TemplateRef }),
-        __metadata("design:type", core_1.TemplateRef)
-    ], DatatableGroupHeaderDirective.prototype, "template", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DatatableGroupHeaderDirective.prototype, "toggle", void 0);
-    DatatableGroupHeaderDirective = __decorate([
-        core_1.Directive({ selector: 'ngx-datatable-group-header' })
-    ], DatatableGroupHeaderDirective);
     return DatatableGroupHeaderDirective;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DatatableGroupHeaderDirective.prototype, "rowHeight", void 0);
+__decorate([
+    core_1.Input(),
+    core_1.ContentChild(body_group_header_template_directive_1.DatatableGroupHeaderTemplateDirective, { read: core_1.TemplateRef }),
+    __metadata("design:type", core_1.TemplateRef)
+], DatatableGroupHeaderDirective.prototype, "template", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DatatableGroupHeaderDirective.prototype, "toggle", void 0);
+DatatableGroupHeaderDirective = __decorate([
+    core_1.Directive({ selector: 'ngx-datatable-group-header' })
+], DatatableGroupHeaderDirective);
 exports.DatatableGroupHeaderDirective = DatatableGroupHeaderDirective;
 
 
@@ -2264,67 +2264,67 @@ var DataTableRowWrapperComponent = (function () {
         styles['width'] = this.innerWidth;
         return styles;
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableRowWrapperComponent.prototype, "innerWidth", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableRowWrapperComponent.prototype, "rowDetail", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableRowWrapperComponent.prototype, "groupHeader", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableRowWrapperComponent.prototype, "offsetX", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableRowWrapperComponent.prototype, "detailRowHeight", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableRowWrapperComponent.prototype, "row", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableRowWrapperComponent.prototype, "groupedRows", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", Object)
-    ], DataTableRowWrapperComponent.prototype, "rowContextmenu", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [Number])
-    ], DataTableRowWrapperComponent.prototype, "rowIndex", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean),
-        __metadata("design:paramtypes", [Boolean])
-    ], DataTableRowWrapperComponent.prototype, "expanded", null);
-    __decorate([
-        core_1.HostListener('contextmenu', ['$event']),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [MouseEvent]),
-        __metadata("design:returntype", void 0)
-    ], DataTableRowWrapperComponent.prototype, "onContextmenu", null);
-    DataTableRowWrapperComponent = __decorate([
-        core_1.Component({
-            selector: 'datatable-row-wrapper',
-            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            template: "\n    <div \n      *ngIf=\"groupHeader && groupHeader.template\"\n      class=\"datatable-group-header\"\n      [ngStyle]=\"getGroupHeaderStyle()\">\n      <ng-template\n        *ngIf=\"groupHeader && groupHeader.template\"\n        [ngTemplateOutlet]=\"groupHeader.template\"\n        [ngTemplateOutletContext]=\"groupContext\">\n      </ng-template>\n    </div>\n    <ng-content \n      *ngIf=\"(groupHeader && groupHeader.template && expanded) || \n             (!groupHeader || !groupHeader.template)\">\n    </ng-content>\n    <div\n      *ngIf=\"rowDetail && rowDetail.template && expanded\"\n      [style.height.px]=\"detailRowHeight\"\n      class=\"datatable-row-detail\">\n      <ng-template\n        *ngIf=\"rowDetail && rowDetail.template\"\n        [ngTemplateOutlet]=\"rowDetail.template\"\n        [ngTemplateOutletContext]=\"rowContext\">\n      </ng-template>\n    </div>\n  ",
-            host: {
-                class: 'datatable-row-wrapper'
-            }
-        }),
-        __metadata("design:paramtypes", [core_1.ChangeDetectorRef, core_1.KeyValueDiffers])
-    ], DataTableRowWrapperComponent);
     return DataTableRowWrapperComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableRowWrapperComponent.prototype, "innerWidth", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableRowWrapperComponent.prototype, "rowDetail", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableRowWrapperComponent.prototype, "groupHeader", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableRowWrapperComponent.prototype, "offsetX", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableRowWrapperComponent.prototype, "detailRowHeight", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableRowWrapperComponent.prototype, "row", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableRowWrapperComponent.prototype, "groupedRows", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], DataTableRowWrapperComponent.prototype, "rowContextmenu", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Number])
+], DataTableRowWrapperComponent.prototype, "rowIndex", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [Boolean])
+], DataTableRowWrapperComponent.prototype, "expanded", null);
+__decorate([
+    core_1.HostListener('contextmenu', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [MouseEvent]),
+    __metadata("design:returntype", void 0)
+], DataTableRowWrapperComponent.prototype, "onContextmenu", null);
+DataTableRowWrapperComponent = __decorate([
+    core_1.Component({
+        selector: 'datatable-row-wrapper',
+        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+        template: "\n    <div \n      *ngIf=\"groupHeader && groupHeader.template\"\n      class=\"datatable-group-header\"\n      [ngStyle]=\"getGroupHeaderStyle()\">\n      <ng-template\n        *ngIf=\"groupHeader && groupHeader.template\"\n        [ngTemplateOutlet]=\"groupHeader.template\"\n        [ngTemplateOutletContext]=\"groupContext\">\n      </ng-template>\n    </div>\n    <ng-content \n      *ngIf=\"(groupHeader && groupHeader.template && expanded) || \n             (!groupHeader || !groupHeader.template)\">\n    </ng-content>\n    <div\n      *ngIf=\"rowDetail && rowDetail.template && expanded\"\n      [style.height.px]=\"detailRowHeight\"\n      class=\"datatable-row-detail\">\n      <ng-template\n        *ngIf=\"rowDetail && rowDetail.template\"\n        [ngTemplateOutlet]=\"rowDetail.template\"\n        [ngTemplateOutletContext]=\"rowContext\">\n      </ng-template>\n    </div>\n  ",
+        host: {
+            class: 'datatable-row-wrapper'
+        }
+    }),
+    __metadata("design:paramtypes", [core_1.ChangeDetectorRef, core_1.KeyValueDiffers])
+], DataTableRowWrapperComponent);
 exports.DataTableRowWrapperComponent = DataTableRowWrapperComponent;
 
 
@@ -2486,88 +2486,88 @@ var DataTableBodyRowComponent = (function () {
         this.columnsByPin = utils_1.allColumnsByPinArr(this._columns);
         this.columnGroupWidths = utils_1.columnGroupWidths(colsByPin, this._columns);
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Array),
-        __metadata("design:paramtypes", [Array])
-    ], DataTableBodyRowComponent.prototype, "columns", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [Number])
-    ], DataTableBodyRowComponent.prototype, "innerWidth", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DataTableBodyRowComponent.prototype, "expanded", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableBodyRowComponent.prototype, "rowClass", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableBodyRowComponent.prototype, "row", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableBodyRowComponent.prototype, "group", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableBodyRowComponent.prototype, "offsetX", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DataTableBodyRowComponent.prototype, "isSelected", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableBodyRowComponent.prototype, "rowIndex", void 0);
-    __decorate([
-        core_1.HostBinding('class'),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [])
-    ], DataTableBodyRowComponent.prototype, "cssClass", null);
-    __decorate([
-        core_1.HostBinding('style.height.px'),
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableBodyRowComponent.prototype, "rowHeight", void 0);
-    __decorate([
-        core_1.HostBinding('style.width.px'),
-        __metadata("design:type", String),
-        __metadata("design:paramtypes", [])
-    ], DataTableBodyRowComponent.prototype, "columnsTotalWidths", null);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DataTableBodyRowComponent.prototype, "activate", void 0);
-    __decorate([
-        core_1.HostListener('keydown', ['$event']),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [KeyboardEvent]),
-        __metadata("design:returntype", void 0)
-    ], DataTableBodyRowComponent.prototype, "onKeyDown", null);
-    __decorate([
-        core_1.HostListener('mouseenter', ['$event']),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [Event]),
-        __metadata("design:returntype", void 0)
-    ], DataTableBodyRowComponent.prototype, "onMouseenter", null);
-    DataTableBodyRowComponent = __decorate([
-        core_1.Component({
-            selector: 'datatable-body-row',
-            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            template: "\n    <div\n      *ngFor=\"let colGroup of columnsByPin; let i = index; trackBy: trackByGroups\"\n      class=\"datatable-row-{{colGroup.type}} datatable-row-group\"\n      [ngStyle]=\"stylesByGroup(colGroup.type)\">\n      <datatable-body-cell\n        *ngFor=\"let column of colGroup.columns; let ii = index; trackBy: columnTrackingFn\"\n        tabindex=\"-1\"\n        [row]=\"row\"\n        [group]=\"group\"\n        [expanded]=\"expanded\"\n        [isSelected]=\"isSelected\"\n        [rowIndex]=\"rowIndex\"\n        [column]=\"column\"\n        [rowHeight]=\"rowHeight\"\n        (activate)=\"onActivate($event, ii)\">\n      </datatable-body-cell>\n    </div>      \n  "
-        }),
-        __metadata("design:paramtypes", [core_1.KeyValueDiffers,
-            services_1.ScrollbarHelper,
-            core_1.ChangeDetectorRef,
-            core_1.ElementRef])
-    ], DataTableBodyRowComponent);
     return DataTableBodyRowComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array),
+    __metadata("design:paramtypes", [Array])
+], DataTableBodyRowComponent.prototype, "columns", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Number])
+], DataTableBodyRowComponent.prototype, "innerWidth", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DataTableBodyRowComponent.prototype, "expanded", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableBodyRowComponent.prototype, "rowClass", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableBodyRowComponent.prototype, "row", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableBodyRowComponent.prototype, "group", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableBodyRowComponent.prototype, "offsetX", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DataTableBodyRowComponent.prototype, "isSelected", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableBodyRowComponent.prototype, "rowIndex", void 0);
+__decorate([
+    core_1.HostBinding('class'),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [])
+], DataTableBodyRowComponent.prototype, "cssClass", null);
+__decorate([
+    core_1.HostBinding('style.height.px'),
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableBodyRowComponent.prototype, "rowHeight", void 0);
+__decorate([
+    core_1.HostBinding('style.width.px'),
+    __metadata("design:type", String),
+    __metadata("design:paramtypes", [])
+], DataTableBodyRowComponent.prototype, "columnsTotalWidths", null);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DataTableBodyRowComponent.prototype, "activate", void 0);
+__decorate([
+    core_1.HostListener('keydown', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [KeyboardEvent]),
+    __metadata("design:returntype", void 0)
+], DataTableBodyRowComponent.prototype, "onKeyDown", null);
+__decorate([
+    core_1.HostListener('mouseenter', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Event]),
+    __metadata("design:returntype", void 0)
+], DataTableBodyRowComponent.prototype, "onMouseenter", null);
+DataTableBodyRowComponent = __decorate([
+    core_1.Component({
+        selector: 'datatable-body-row',
+        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+        template: "\n    <div\n      *ngFor=\"let colGroup of columnsByPin; let i = index; trackBy: trackByGroups\"\n      class=\"datatable-row-{{colGroup.type}} datatable-row-group\"\n      [ngStyle]=\"stylesByGroup(colGroup.type)\">\n      <datatable-body-cell\n        *ngFor=\"let column of colGroup.columns; let ii = index; trackBy: columnTrackingFn\"\n        tabindex=\"-1\"\n        [row]=\"row\"\n        [group]=\"group\"\n        [expanded]=\"expanded\"\n        [isSelected]=\"isSelected\"\n        [rowIndex]=\"rowIndex\"\n        [column]=\"column\"\n        [rowHeight]=\"rowHeight\"\n        (activate)=\"onActivate($event, ii)\">\n      </datatable-body-cell>\n    </div>      \n  "
+    }),
+    __metadata("design:paramtypes", [core_1.KeyValueDiffers,
+        services_1.ScrollbarHelper,
+        core_1.ChangeDetectorRef,
+        core_1.ElementRef])
+], DataTableBodyRowComponent);
 exports.DataTableBodyRowComponent = DataTableBodyRowComponent;
 
 
@@ -3127,159 +3127,159 @@ var DataTableBodyComponent = (function () {
     DataTableBodyComponent.prototype.getRowIndex = function (row) {
         return this.rowIndexes.get(row) || 0;
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DataTableBodyComponent.prototype, "scrollbarV", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DataTableBodyComponent.prototype, "scrollbarH", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DataTableBodyComponent.prototype, "loadingIndicator", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DataTableBodyComponent.prototype, "externalPaging", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableBodyComponent.prototype, "rowHeight", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableBodyComponent.prototype, "offsetX", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTableBodyComponent.prototype, "emptyMessage", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTableBodyComponent.prototype, "selectionType", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Array)
-    ], DataTableBodyComponent.prototype, "selected", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableBodyComponent.prototype, "rowIdentity", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableBodyComponent.prototype, "rowDetail", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableBodyComponent.prototype, "groupHeader", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableBodyComponent.prototype, "selectCheck", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTableBodyComponent.prototype, "trackByProp", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableBodyComponent.prototype, "rowClass", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableBodyComponent.prototype, "groupedRows", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DataTableBodyComponent.prototype, "groupExpansionDefault", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableBodyComponent.prototype, "innerWidth", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTableBodyComponent.prototype, "groupRowsBy", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [Number])
-    ], DataTableBodyComponent.prototype, "pageSize", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Array),
-        __metadata("design:paramtypes", [Array])
-    ], DataTableBodyComponent.prototype, "rows", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Array),
-        __metadata("design:paramtypes", [Array])
-    ], DataTableBodyComponent.prototype, "columns", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [Number])
-    ], DataTableBodyComponent.prototype, "offset", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [Number])
-    ], DataTableBodyComponent.prototype, "rowCount", null);
-    __decorate([
-        core_1.HostBinding('style.width'),
-        __metadata("design:type", String),
-        __metadata("design:paramtypes", [])
-    ], DataTableBodyComponent.prototype, "bodyWidth", null);
-    __decorate([
-        core_1.Input(),
-        core_1.HostBinding('style.height'),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [Object])
-    ], DataTableBodyComponent.prototype, "bodyHeight", null);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DataTableBodyComponent.prototype, "scroll", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DataTableBodyComponent.prototype, "page", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DataTableBodyComponent.prototype, "activate", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DataTableBodyComponent.prototype, "select", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DataTableBodyComponent.prototype, "detailToggle", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", Object)
-    ], DataTableBodyComponent.prototype, "rowContextmenu", void 0);
-    __decorate([
-        core_1.ViewChild(scroller_component_1.ScrollerComponent),
-        __metadata("design:type", scroller_component_1.ScrollerComponent)
-    ], DataTableBodyComponent.prototype, "scroller", void 0);
-    DataTableBodyComponent = __decorate([
-        core_1.Component({
-            selector: 'datatable-body',
-            template: "\n    <datatable-selection\n      #selector\n      [selected]=\"selected\"\n      [rows]=\"rows\"\n      [selectCheck]=\"selectCheck\"\n      [selectEnabled]=\"selectEnabled\"\n      [selectionType]=\"selectionType\"\n      [rowIdentity]=\"rowIdentity\"\n      (select)=\"select.emit($event)\"\n      (activate)=\"activate.emit($event)\">\n      <datatable-progress\n        *ngIf=\"loadingIndicator\">\n      </datatable-progress>\n      <datatable-scroller\n        *ngIf=\"rows?.length\"\n        [scrollbarV]=\"scrollbarV\"\n        [scrollbarH]=\"scrollbarH\"\n        [scrollHeight]=\"scrollHeight\"\n        [scrollWidth]=\"columnGroupWidths.total\"\n        (scroll)=\"onBodyScroll($event)\">\n        <datatable-row-wrapper\n          [groupedRows]=\"groupedRows\"\n          *ngFor=\"let group of temp; let i = index; trackBy: rowTrackingFn;\"\n          [innerWidth]=\"innerWidth\"\n          [ngStyle]=\"getRowsStyles(group)\"\n          [rowDetail]=\"rowDetail\"\n          [groupHeader]=\"groupHeader\"\n          [offsetX]=\"offsetX\"\n          [detailRowHeight]=\"getDetailRowHeight(group[i],i)\"\n          [row]=\"group\"\n          [expanded]=\"getRowExpanded(group)\"\n          [rowIndex]=\"getRowIndex(group[i])\"\n          (rowContextmenu)=\"rowContextmenu.emit($event)\">\n          <datatable-body-row \n            *ngIf=\"!groupedRows; else groupedRowsTemplate\"        \n            tabindex=\"-1\"\n            [isSelected]=\"selector.getRowSelected(group)\"\n            [innerWidth]=\"innerWidth\"\n            [offsetX]=\"offsetX\"\n            [columns]=\"columns\"\n            [rowHeight]=\"getRowHeight(group)\"\n            [row]=\"group\"\n            [rowIndex]=\"getRowIndex(group)\"\n            [expanded]=\"getRowExpanded(group)\"            \n            [rowClass]=\"rowClass\"\n            (activate)=\"selector.onActivate($event, indexes.first + i)\">\n          </datatable-body-row>\n          <ng-template #groupedRowsTemplate>\n            <datatable-body-row\n              *ngFor=\"let row of group.value; let i = index; trackBy: rowTrackingFn;\"\n              tabindex=\"-1\"\n              [isSelected]=\"selector.getRowSelected(row)\"\n              [innerWidth]=\"innerWidth\"\n              [offsetX]=\"offsetX\"\n              [columns]=\"columns\"\n              [rowHeight]=\"getRowHeight(row)\"\n              [row]=\"row\"\n              [group]=\"group.value\"\n              [rowIndex]=\"getRowIndex(row)\"\n              [expanded]=\"getRowExpanded(row)\"\n              [rowClass]=\"rowClass\"\n              (activate)=\"selector.onActivate($event, i)\">\n            </datatable-body-row>\n          </ng-template>\n        </datatable-row-wrapper>\n      </datatable-scroller>\n      <div\n        class=\"empty-row\"\n        *ngIf=\"!rows?.length\"\n        [innerHTML]=\"emptyMessage\">\n      </div>\n    </datatable-selection>\n  ",
-            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            host: {
-                class: 'datatable-body'
-            }
-        }),
-        __metadata("design:paramtypes", [core_1.ChangeDetectorRef])
-    ], DataTableBodyComponent);
     return DataTableBodyComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DataTableBodyComponent.prototype, "scrollbarV", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DataTableBodyComponent.prototype, "scrollbarH", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DataTableBodyComponent.prototype, "loadingIndicator", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DataTableBodyComponent.prototype, "externalPaging", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableBodyComponent.prototype, "rowHeight", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableBodyComponent.prototype, "offsetX", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DataTableBodyComponent.prototype, "emptyMessage", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", types_1.SelectionType)
+], DataTableBodyComponent.prototype, "selectionType", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array)
+], DataTableBodyComponent.prototype, "selected", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableBodyComponent.prototype, "rowIdentity", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableBodyComponent.prototype, "rowDetail", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableBodyComponent.prototype, "groupHeader", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableBodyComponent.prototype, "selectCheck", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DataTableBodyComponent.prototype, "trackByProp", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableBodyComponent.prototype, "rowClass", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableBodyComponent.prototype, "groupedRows", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DataTableBodyComponent.prototype, "groupExpansionDefault", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableBodyComponent.prototype, "innerWidth", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DataTableBodyComponent.prototype, "groupRowsBy", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Number])
+], DataTableBodyComponent.prototype, "pageSize", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array),
+    __metadata("design:paramtypes", [Array])
+], DataTableBodyComponent.prototype, "rows", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array),
+    __metadata("design:paramtypes", [Array])
+], DataTableBodyComponent.prototype, "columns", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Number])
+], DataTableBodyComponent.prototype, "offset", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Number])
+], DataTableBodyComponent.prototype, "rowCount", null);
+__decorate([
+    core_1.HostBinding('style.width'),
+    __metadata("design:type", String),
+    __metadata("design:paramtypes", [])
+], DataTableBodyComponent.prototype, "bodyWidth", null);
+__decorate([
+    core_1.Input(),
+    core_1.HostBinding('style.height'),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [Object])
+], DataTableBodyComponent.prototype, "bodyHeight", null);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DataTableBodyComponent.prototype, "scroll", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DataTableBodyComponent.prototype, "page", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DataTableBodyComponent.prototype, "activate", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DataTableBodyComponent.prototype, "select", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DataTableBodyComponent.prototype, "detailToggle", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], DataTableBodyComponent.prototype, "rowContextmenu", void 0);
+__decorate([
+    core_1.ViewChild(scroller_component_1.ScrollerComponent),
+    __metadata("design:type", scroller_component_1.ScrollerComponent)
+], DataTableBodyComponent.prototype, "scroller", void 0);
+DataTableBodyComponent = __decorate([
+    core_1.Component({
+        selector: 'datatable-body',
+        template: "\n    <datatable-selection\n      #selector\n      [selected]=\"selected\"\n      [rows]=\"rows\"\n      [selectCheck]=\"selectCheck\"\n      [selectEnabled]=\"selectEnabled\"\n      [selectionType]=\"selectionType\"\n      [rowIdentity]=\"rowIdentity\"\n      (select)=\"select.emit($event)\"\n      (activate)=\"activate.emit($event)\">\n      <datatable-progress\n        *ngIf=\"loadingIndicator\">\n      </datatable-progress>\n      <datatable-scroller\n        *ngIf=\"rows?.length\"\n        [scrollbarV]=\"scrollbarV\"\n        [scrollbarH]=\"scrollbarH\"\n        [scrollHeight]=\"scrollHeight\"\n        [scrollWidth]=\"columnGroupWidths.total\"\n        (scroll)=\"onBodyScroll($event)\">\n        <datatable-row-wrapper\n          [groupedRows]=\"groupedRows\"\n          *ngFor=\"let group of temp; let i = index; trackBy: rowTrackingFn;\"\n          [innerWidth]=\"innerWidth\"\n          [ngStyle]=\"getRowsStyles(group)\"\n          [rowDetail]=\"rowDetail\"\n          [groupHeader]=\"groupHeader\"\n          [offsetX]=\"offsetX\"\n          [detailRowHeight]=\"getDetailRowHeight(group[i],i)\"\n          [row]=\"group\"\n          [expanded]=\"getRowExpanded(group)\"\n          [rowIndex]=\"getRowIndex(group[i])\"\n          (rowContextmenu)=\"rowContextmenu.emit($event)\">\n          <datatable-body-row \n            *ngIf=\"!groupedRows; else groupedRowsTemplate\"        \n            tabindex=\"-1\"\n            [isSelected]=\"selector.getRowSelected(group)\"\n            [innerWidth]=\"innerWidth\"\n            [offsetX]=\"offsetX\"\n            [columns]=\"columns\"\n            [rowHeight]=\"getRowHeight(group)\"\n            [row]=\"group\"\n            [rowIndex]=\"getRowIndex(group)\"\n            [expanded]=\"getRowExpanded(group)\"            \n            [rowClass]=\"rowClass\"\n            (activate)=\"selector.onActivate($event, indexes.first + i)\">\n          </datatable-body-row>\n          <ng-template #groupedRowsTemplate>\n            <datatable-body-row\n              *ngFor=\"let row of group.value; let i = index; trackBy: rowTrackingFn;\"\n              tabindex=\"-1\"\n              [isSelected]=\"selector.getRowSelected(row)\"\n              [innerWidth]=\"innerWidth\"\n              [offsetX]=\"offsetX\"\n              [columns]=\"columns\"\n              [rowHeight]=\"getRowHeight(row)\"\n              [row]=\"row\"\n              [group]=\"group.value\"\n              [rowIndex]=\"getRowIndex(row)\"\n              [expanded]=\"getRowExpanded(row)\"\n              [rowClass]=\"rowClass\"\n              (activate)=\"selector.onActivate($event, i)\">\n            </datatable-body-row>\n          </ng-template>\n        </datatable-row-wrapper>\n      </datatable-scroller>\n      <div\n        class=\"empty-row\"\n        *ngIf=\"!rows?.length\"\n        [innerHTML]=\"emptyMessage\">\n      </div>\n    </datatable-selection>\n  ",
+        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+        host: {
+            class: 'datatable-body'
+        }
+    }),
+    __metadata("design:paramtypes", [core_1.ChangeDetectorRef])
+], DataTableBodyComponent);
 exports.DataTableBodyComponent = DataTableBodyComponent;
 
 
@@ -3323,15 +3323,15 @@ var core_1 = __webpack_require__("@angular/core");
 var ProgressBarComponent = (function () {
     function ProgressBarComponent() {
     }
-    ProgressBarComponent = __decorate([
-        core_1.Component({
-            selector: 'datatable-progress',
-            template: "\n    <div class=\"progress-linear\" role=\"progressbar\">\n      <div class=\"container\">\n        <div class=\"bar\"></div>\n      </div>\n    </div>\n  ",
-            changeDetection: core_1.ChangeDetectionStrategy.OnPush
-        })
-    ], ProgressBarComponent);
     return ProgressBarComponent;
 }());
+ProgressBarComponent = __decorate([
+    core_1.Component({
+        selector: 'datatable-progress',
+        template: "\n    <div class=\"progress-linear\" role=\"progressbar\">\n      <div class=\"container\">\n        <div class=\"bar\"></div>\n      </div>\n    </div>\n  ",
+        changeDetection: core_1.ChangeDetectionStrategy.OnPush
+    })
+], ProgressBarComponent);
 exports.ProgressBarComponent = ProgressBarComponent;
 
 
@@ -3404,41 +3404,41 @@ var ScrollerComponent = (function () {
         this.prevScrollYPos = this.scrollYPos;
         this.prevScrollXPos = this.scrollXPos;
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], ScrollerComponent.prototype, "scrollbarV", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], ScrollerComponent.prototype, "scrollbarH", void 0);
-    __decorate([
-        core_1.HostBinding('style.height.px'),
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], ScrollerComponent.prototype, "scrollHeight", void 0);
-    __decorate([
-        core_1.HostBinding('style.width.px'),
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], ScrollerComponent.prototype, "scrollWidth", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], ScrollerComponent.prototype, "scroll", void 0);
-    ScrollerComponent = __decorate([
-        core_1.Component({
-            selector: 'datatable-scroller',
-            template: "\n    <ng-content></ng-content>\n  ",
-            host: {
-                class: 'datatable-scroll'
-            },
-            changeDetection: core_1.ChangeDetectionStrategy.OnPush
-        }),
-        __metadata("design:paramtypes", [core_1.ElementRef, core_1.Renderer])
-    ], ScrollerComponent);
     return ScrollerComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], ScrollerComponent.prototype, "scrollbarV", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], ScrollerComponent.prototype, "scrollbarH", void 0);
+__decorate([
+    core_1.HostBinding('style.height.px'),
+    core_1.Input(),
+    __metadata("design:type", Number)
+], ScrollerComponent.prototype, "scrollHeight", void 0);
+__decorate([
+    core_1.HostBinding('style.width.px'),
+    core_1.Input(),
+    __metadata("design:type", Number)
+], ScrollerComponent.prototype, "scrollWidth", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], ScrollerComponent.prototype, "scroll", void 0);
+ScrollerComponent = __decorate([
+    core_1.Component({
+        selector: 'datatable-scroller',
+        template: "\n    <ng-content></ng-content>\n  ",
+        host: {
+            class: 'datatable-scroll'
+        },
+        changeDetection: core_1.ChangeDetectionStrategy.OnPush
+    }),
+    __metadata("design:paramtypes", [core_1.ElementRef, core_1.Renderer])
+], ScrollerComponent);
 exports.ScrollerComponent = ScrollerComponent;
 
 
@@ -3585,47 +3585,47 @@ var DataTableSelectionComponent = (function () {
             return id === rowId;
         });
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Array)
-    ], DataTableSelectionComponent.prototype, "rows", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Array)
-    ], DataTableSelectionComponent.prototype, "selected", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DataTableSelectionComponent.prototype, "selectEnabled", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTableSelectionComponent.prototype, "selectionType", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableSelectionComponent.prototype, "rowIdentity", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableSelectionComponent.prototype, "selectCheck", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DataTableSelectionComponent.prototype, "activate", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DataTableSelectionComponent.prototype, "select", void 0);
-    DataTableSelectionComponent = __decorate([
-        core_1.Component({
-            selector: 'datatable-selection',
-            template: "\n    <ng-content></ng-content>\n  ",
-            changeDetection: core_1.ChangeDetectionStrategy.OnPush
-        })
-    ], DataTableSelectionComponent);
     return DataTableSelectionComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array)
+], DataTableSelectionComponent.prototype, "rows", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array)
+], DataTableSelectionComponent.prototype, "selected", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DataTableSelectionComponent.prototype, "selectEnabled", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", types_1.SelectionType)
+], DataTableSelectionComponent.prototype, "selectionType", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableSelectionComponent.prototype, "rowIdentity", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableSelectionComponent.prototype, "selectCheck", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DataTableSelectionComponent.prototype, "activate", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DataTableSelectionComponent.prototype, "select", void 0);
+DataTableSelectionComponent = __decorate([
+    core_1.Component({
+        selector: 'datatable-selection',
+        template: "\n    <ng-content></ng-content>\n  ",
+        changeDetection: core_1.ChangeDetectionStrategy.OnPush
+    })
+], DataTableSelectionComponent);
 exports.DataTableSelectionComponent = DataTableSelectionComponent;
 
 
@@ -3651,12 +3651,12 @@ var DataTableColumnCellDirective = (function () {
     function DataTableColumnCellDirective(template) {
         this.template = template;
     }
-    DataTableColumnCellDirective = __decorate([
-        core_1.Directive({ selector: '[ngx-datatable-cell-template]' }),
-        __metadata("design:paramtypes", [core_1.TemplateRef])
-    ], DataTableColumnCellDirective);
     return DataTableColumnCellDirective;
 }());
+DataTableColumnCellDirective = __decorate([
+    core_1.Directive({ selector: '[ngx-datatable-cell-template]' }),
+    __metadata("design:paramtypes", [core_1.TemplateRef])
+], DataTableColumnCellDirective);
 exports.DataTableColumnCellDirective = DataTableColumnCellDirective;
 
 
@@ -3682,12 +3682,12 @@ var DataTableColumnHeaderDirective = (function () {
     function DataTableColumnHeaderDirective(template) {
         this.template = template;
     }
-    DataTableColumnHeaderDirective = __decorate([
-        core_1.Directive({ selector: '[ngx-datatable-header-template]' }),
-        __metadata("design:paramtypes", [core_1.TemplateRef])
-    ], DataTableColumnHeaderDirective);
     return DataTableColumnHeaderDirective;
 }());
+DataTableColumnHeaderDirective = __decorate([
+    core_1.Directive({ selector: '[ngx-datatable-header-template]' }),
+    __metadata("design:paramtypes", [core_1.TemplateRef])
+], DataTableColumnHeaderDirective);
 exports.DataTableColumnHeaderDirective = DataTableColumnHeaderDirective;
 
 
@@ -3714,93 +3714,93 @@ var column_cell_directive_1 = __webpack_require__("./src/components/columns/colu
 var DataTableColumnDirective = (function () {
     function DataTableColumnDirective() {
     }
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTableColumnDirective.prototype, "name", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableColumnDirective.prototype, "prop", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableColumnDirective.prototype, "frozenLeft", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableColumnDirective.prototype, "frozenRight", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableColumnDirective.prototype, "flexGrow", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DataTableColumnDirective.prototype, "resizeable", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableColumnDirective.prototype, "comparator", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableColumnDirective.prototype, "pipe", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DataTableColumnDirective.prototype, "sortable", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DataTableColumnDirective.prototype, "draggable", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DataTableColumnDirective.prototype, "canAutoResize", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableColumnDirective.prototype, "minWidth", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableColumnDirective.prototype, "width", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableColumnDirective.prototype, "maxWidth", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DataTableColumnDirective.prototype, "checkboxable", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DataTableColumnDirective.prototype, "headerCheckboxable", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableColumnDirective.prototype, "headerClass", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableColumnDirective.prototype, "cellClass", void 0);
-    __decorate([
-        core_1.Input(),
-        core_1.ContentChild(column_cell_directive_1.DataTableColumnCellDirective, { read: core_1.TemplateRef }),
-        __metadata("design:type", core_1.TemplateRef)
-    ], DataTableColumnDirective.prototype, "cellTemplate", void 0);
-    __decorate([
-        core_1.Input(),
-        core_1.ContentChild(column_header_directive_1.DataTableColumnHeaderDirective, { read: core_1.TemplateRef }),
-        __metadata("design:type", core_1.TemplateRef)
-    ], DataTableColumnDirective.prototype, "headerTemplate", void 0);
-    DataTableColumnDirective = __decorate([
-        core_1.Directive({ selector: 'ngx-datatable-column' })
-    ], DataTableColumnDirective);
     return DataTableColumnDirective;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DataTableColumnDirective.prototype, "name", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableColumnDirective.prototype, "prop", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableColumnDirective.prototype, "frozenLeft", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableColumnDirective.prototype, "frozenRight", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableColumnDirective.prototype, "flexGrow", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DataTableColumnDirective.prototype, "resizeable", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableColumnDirective.prototype, "comparator", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableColumnDirective.prototype, "pipe", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DataTableColumnDirective.prototype, "sortable", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DataTableColumnDirective.prototype, "draggable", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DataTableColumnDirective.prototype, "canAutoResize", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableColumnDirective.prototype, "minWidth", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableColumnDirective.prototype, "width", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableColumnDirective.prototype, "maxWidth", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DataTableColumnDirective.prototype, "checkboxable", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DataTableColumnDirective.prototype, "headerCheckboxable", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableColumnDirective.prototype, "headerClass", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableColumnDirective.prototype, "cellClass", void 0);
+__decorate([
+    core_1.Input(),
+    core_1.ContentChild(column_cell_directive_1.DataTableColumnCellDirective, { read: core_1.TemplateRef }),
+    __metadata("design:type", core_1.TemplateRef)
+], DataTableColumnDirective.prototype, "cellTemplate", void 0);
+__decorate([
+    core_1.Input(),
+    core_1.ContentChild(column_header_directive_1.DataTableColumnHeaderDirective, { read: core_1.TemplateRef }),
+    __metadata("design:type", core_1.TemplateRef)
+], DataTableColumnDirective.prototype, "headerTemplate", void 0);
+DataTableColumnDirective = __decorate([
+    core_1.Directive({ selector: 'ngx-datatable-column' })
+], DataTableColumnDirective);
 exports.DataTableColumnDirective = DataTableColumnDirective;
 
 
@@ -4603,252 +4603,252 @@ var DatatableComponent = (function () {
     DatatableComponent.prototype.onBodySelect = function (event) {
         this.select.emit(event);
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [Object])
-    ], DatatableComponent.prototype, "rows", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String),
-        __metadata("design:paramtypes", [String])
-    ], DatatableComponent.prototype, "groupRowsBy", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Array)
-    ], DatatableComponent.prototype, "groupedRows", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Array),
-        __metadata("design:paramtypes", [Array])
-    ], DatatableComponent.prototype, "columns", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Array)
-    ], DatatableComponent.prototype, "selected", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DatatableComponent.prototype, "scrollbarV", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DatatableComponent.prototype, "scrollbarH", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DatatableComponent.prototype, "rowHeight", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DatatableComponent.prototype, "columnMode", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DatatableComponent.prototype, "headerHeight", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DatatableComponent.prototype, "footerHeight", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DatatableComponent.prototype, "externalPaging", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DatatableComponent.prototype, "externalSorting", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [Object])
-    ], DatatableComponent.prototype, "limit", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [Number])
-    ], DatatableComponent.prototype, "count", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [Number])
-    ], DatatableComponent.prototype, "offset", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DatatableComponent.prototype, "loadingIndicator", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DatatableComponent.prototype, "selectionType", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DatatableComponent.prototype, "reorderable", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DatatableComponent.prototype, "sortType", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Array)
-    ], DatatableComponent.prototype, "sorts", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DatatableComponent.prototype, "cssClasses", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DatatableComponent.prototype, "messages", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Function)
-    ], DatatableComponent.prototype, "rowIdentity", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DatatableComponent.prototype, "rowClass", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DatatableComponent.prototype, "selectCheck", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DatatableComponent.prototype, "groupExpansionDefault", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DatatableComponent.prototype, "trackByProp", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DatatableComponent.prototype, "scroll", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DatatableComponent.prototype, "activate", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DatatableComponent.prototype, "select", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DatatableComponent.prototype, "sort", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DatatableComponent.prototype, "page", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DatatableComponent.prototype, "reorder", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DatatableComponent.prototype, "resize", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", Object)
-    ], DatatableComponent.prototype, "tableContextmenu", void 0);
-    __decorate([
-        core_1.HostBinding('class.fixed-header'),
-        __metadata("design:type", Boolean),
-        __metadata("design:paramtypes", [])
-    ], DatatableComponent.prototype, "isFixedHeader", null);
-    __decorate([
-        core_1.HostBinding('class.fixed-row'),
-        __metadata("design:type", Boolean),
-        __metadata("design:paramtypes", [])
-    ], DatatableComponent.prototype, "isFixedRow", null);
-    __decorate([
-        core_1.HostBinding('class.scroll-vertical'),
-        __metadata("design:type", Boolean),
-        __metadata("design:paramtypes", [])
-    ], DatatableComponent.prototype, "isVertScroll", null);
-    __decorate([
-        core_1.HostBinding('class.scroll-horz'),
-        __metadata("design:type", Boolean),
-        __metadata("design:paramtypes", [])
-    ], DatatableComponent.prototype, "isHorScroll", null);
-    __decorate([
-        core_1.HostBinding('class.selectable'),
-        __metadata("design:type", Boolean),
-        __metadata("design:paramtypes", [])
-    ], DatatableComponent.prototype, "isSelectable", null);
-    __decorate([
-        core_1.HostBinding('class.checkbox-selection'),
-        __metadata("design:type", Boolean),
-        __metadata("design:paramtypes", [])
-    ], DatatableComponent.prototype, "isCheckboxSelection", null);
-    __decorate([
-        core_1.HostBinding('class.cell-selection'),
-        __metadata("design:type", Boolean),
-        __metadata("design:paramtypes", [])
-    ], DatatableComponent.prototype, "isCellSelection", null);
-    __decorate([
-        core_1.HostBinding('class.single-selection'),
-        __metadata("design:type", Boolean),
-        __metadata("design:paramtypes", [])
-    ], DatatableComponent.prototype, "isSingleSelection", null);
-    __decorate([
-        core_1.HostBinding('class.multi-selection'),
-        __metadata("design:type", Boolean),
-        __metadata("design:paramtypes", [])
-    ], DatatableComponent.prototype, "isMultiSelection", null);
-    __decorate([
-        core_1.HostBinding('class.multi-click-selection'),
-        __metadata("design:type", Boolean),
-        __metadata("design:paramtypes", [])
-    ], DatatableComponent.prototype, "isMultiClickSelection", null);
-    __decorate([
-        core_1.ContentChildren(columns_1.DataTableColumnDirective),
-        __metadata("design:type", core_1.QueryList),
-        __metadata("design:paramtypes", [core_1.QueryList])
-    ], DatatableComponent.prototype, "columnTemplates", null);
-    __decorate([
-        core_1.ContentChild(row_detail_1.DatatableRowDetailDirective),
-        __metadata("design:type", row_detail_1.DatatableRowDetailDirective)
-    ], DatatableComponent.prototype, "rowDetail", void 0);
-    __decorate([
-        core_1.ContentChild(body_group_header_directive_1.DatatableGroupHeaderDirective),
-        __metadata("design:type", body_group_header_directive_1.DatatableGroupHeaderDirective)
-    ], DatatableComponent.prototype, "groupHeader", void 0);
-    __decorate([
-        core_1.ContentChild(footer_1.DatatableFooterDirective),
-        __metadata("design:type", footer_1.DatatableFooterDirective)
-    ], DatatableComponent.prototype, "footer", void 0);
-    __decorate([
-        core_1.ViewChild(body_1.DataTableBodyComponent),
-        __metadata("design:type", body_1.DataTableBodyComponent)
-    ], DatatableComponent.prototype, "bodyComponent", void 0);
-    __decorate([
-        core_1.HostListener('window:resize'),
-        utils_1.throttleable(5),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], DatatableComponent.prototype, "onWindowResize", null);
-    DatatableComponent = __decorate([
-        core_1.Component({
-            selector: 'ngx-datatable',
-            template: "\n    <div\n      visibilityObserver\n      (visible)=\"recalculate()\">\n      <datatable-header\n        *ngIf=\"headerHeight\"\n        [sorts]=\"sorts\"\n        [sortType]=\"sortType\"\n        [scrollbarH]=\"scrollbarH\"\n        [innerWidth]=\"innerWidth\"\n        [offsetX]=\"offsetX\"\n        [dealsWithGroup]=\"groupedRows\"\n        [columns]=\"_internalColumns\"\n        [headerHeight]=\"headerHeight\"\n        [reorderable]=\"reorderable\"\n        [sortAscendingIcon]=\"cssClasses.sortAscending\"\n        [sortDescendingIcon]=\"cssClasses.sortDescending\"\n        [allRowsSelected]=\"allRowsSelected\"\n        [selectionType]=\"selectionType\"\n        (sort)=\"onColumnSort($event)\"\n        (resize)=\"onColumnResize($event)\"\n        (reorder)=\"onColumnReorder($event)\"\n        (select)=\"onHeaderSelect($event)\"\n        (columnContextmenu)=\"onColumnContextmenu($event)\">\n      </datatable-header>\n      <datatable-body\n        [groupRowsBy]=\"groupRowsBy\"\n        [groupedRows]=\"groupedRows\"\n        [rows]=\"_internalRows\"\n        [groupExpansionDefault]=\"groupExpansionDefault\"\n        [scrollbarV]=\"scrollbarV\"\n        [scrollbarH]=\"scrollbarH\"\n        [loadingIndicator]=\"loadingIndicator\"\n        [externalPaging]=\"externalPaging\"\n        [rowHeight]=\"rowHeight\"\n        [rowCount]=\"rowCount\"\n        [offset]=\"offset\"\n        [trackByProp]=\"trackByProp\"\n        [columns]=\"_internalColumns\"\n        [pageSize]=\"pageSize\"\n        [offsetX]=\"offsetX\"\n        [rowDetail]=\"rowDetail\"\n        [groupHeader]=\"groupHeader\"\n        [selected]=\"selected\"\n        [innerWidth]=\"innerWidth\"\n        [bodyHeight]=\"bodyHeight\"\n        [selectionType]=\"selectionType\"\n        [emptyMessage]=\"messages.emptyMessage\"\n        [rowIdentity]=\"rowIdentity\"\n        [rowClass]=\"rowClass\"\n        [selectCheck]=\"selectCheck\"\n        (page)=\"onBodyPage($event)\"\n        (activate)=\"activate.emit($event)\"\n        (rowContextmenu)=\"onRowContextmenu($event)\"\n        (select)=\"onBodySelect($event)\"\n        (scroll)=\"onBodyScroll($event)\">\n      </datatable-body>\n      <datatable-footer\n        *ngIf=\"footerHeight\"\n        [rowCount]=\"rowCount\"\n        [pageSize]=\"pageSize\"\n        [offset]=\"offset\"\n        [footerHeight]=\"footerHeight\"\n        [footerTemplate]=\"footer\"\n        [totalMessage]=\"messages.totalMessage\"\n        [pagerLeftArrowIcon]=\"cssClasses.pagerLeftArrow\"\n        [pagerRightArrowIcon]=\"cssClasses.pagerRightArrow\"\n        [pagerPreviousIcon]=\"cssClasses.pagerPrevious\"\n        [selectedCount]=\"selected.length\"\n        [selectedMessage]=\"!!selectionType && messages.selectedMessage\"\n        [pagerNextIcon]=\"cssClasses.pagerNext\"\n        (page)=\"onFooterPage($event)\">\n      </datatable-footer>\n    </div>\n  ",
-            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            encapsulation: core_1.ViewEncapsulation.None,
-            styles: [__webpack_require__("./src/components/datatable.component.scss")],
-            host: {
-                class: 'ngx-datatable'
-            }
-        }),
-        __metadata("design:paramtypes", [services_1.ScrollbarHelper,
-            core_1.ChangeDetectorRef,
-            core_1.ElementRef,
-            core_1.KeyValueDiffers])
-    ], DatatableComponent);
     return DatatableComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [Object])
+], DatatableComponent.prototype, "rows", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String),
+    __metadata("design:paramtypes", [String])
+], DatatableComponent.prototype, "groupRowsBy", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array)
+], DatatableComponent.prototype, "groupedRows", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array),
+    __metadata("design:paramtypes", [Array])
+], DatatableComponent.prototype, "columns", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array)
+], DatatableComponent.prototype, "selected", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DatatableComponent.prototype, "scrollbarV", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DatatableComponent.prototype, "scrollbarH", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DatatableComponent.prototype, "rowHeight", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", types_1.ColumnMode)
+], DatatableComponent.prototype, "columnMode", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DatatableComponent.prototype, "headerHeight", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DatatableComponent.prototype, "footerHeight", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DatatableComponent.prototype, "externalPaging", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DatatableComponent.prototype, "externalSorting", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Number])
+], DatatableComponent.prototype, "limit", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Number])
+], DatatableComponent.prototype, "count", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Number])
+], DatatableComponent.prototype, "offset", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DatatableComponent.prototype, "loadingIndicator", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", types_1.SelectionType)
+], DatatableComponent.prototype, "selectionType", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DatatableComponent.prototype, "reorderable", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", types_1.SortType)
+], DatatableComponent.prototype, "sortType", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array)
+], DatatableComponent.prototype, "sorts", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DatatableComponent.prototype, "cssClasses", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DatatableComponent.prototype, "messages", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Function)
+], DatatableComponent.prototype, "rowIdentity", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DatatableComponent.prototype, "rowClass", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DatatableComponent.prototype, "selectCheck", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DatatableComponent.prototype, "groupExpansionDefault", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DatatableComponent.prototype, "trackByProp", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DatatableComponent.prototype, "scroll", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DatatableComponent.prototype, "activate", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DatatableComponent.prototype, "select", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DatatableComponent.prototype, "sort", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DatatableComponent.prototype, "page", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DatatableComponent.prototype, "reorder", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DatatableComponent.prototype, "resize", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], DatatableComponent.prototype, "tableContextmenu", void 0);
+__decorate([
+    core_1.HostBinding('class.fixed-header'),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [])
+], DatatableComponent.prototype, "isFixedHeader", null);
+__decorate([
+    core_1.HostBinding('class.fixed-row'),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [])
+], DatatableComponent.prototype, "isFixedRow", null);
+__decorate([
+    core_1.HostBinding('class.scroll-vertical'),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [])
+], DatatableComponent.prototype, "isVertScroll", null);
+__decorate([
+    core_1.HostBinding('class.scroll-horz'),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [])
+], DatatableComponent.prototype, "isHorScroll", null);
+__decorate([
+    core_1.HostBinding('class.selectable'),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [])
+], DatatableComponent.prototype, "isSelectable", null);
+__decorate([
+    core_1.HostBinding('class.checkbox-selection'),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [])
+], DatatableComponent.prototype, "isCheckboxSelection", null);
+__decorate([
+    core_1.HostBinding('class.cell-selection'),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [])
+], DatatableComponent.prototype, "isCellSelection", null);
+__decorate([
+    core_1.HostBinding('class.single-selection'),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [])
+], DatatableComponent.prototype, "isSingleSelection", null);
+__decorate([
+    core_1.HostBinding('class.multi-selection'),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [])
+], DatatableComponent.prototype, "isMultiSelection", null);
+__decorate([
+    core_1.HostBinding('class.multi-click-selection'),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [])
+], DatatableComponent.prototype, "isMultiClickSelection", null);
+__decorate([
+    core_1.ContentChildren(columns_1.DataTableColumnDirective),
+    __metadata("design:type", core_1.QueryList),
+    __metadata("design:paramtypes", [core_1.QueryList])
+], DatatableComponent.prototype, "columnTemplates", null);
+__decorate([
+    core_1.ContentChild(row_detail_1.DatatableRowDetailDirective),
+    __metadata("design:type", row_detail_1.DatatableRowDetailDirective)
+], DatatableComponent.prototype, "rowDetail", void 0);
+__decorate([
+    core_1.ContentChild(body_group_header_directive_1.DatatableGroupHeaderDirective),
+    __metadata("design:type", body_group_header_directive_1.DatatableGroupHeaderDirective)
+], DatatableComponent.prototype, "groupHeader", void 0);
+__decorate([
+    core_1.ContentChild(footer_1.DatatableFooterDirective),
+    __metadata("design:type", footer_1.DatatableFooterDirective)
+], DatatableComponent.prototype, "footer", void 0);
+__decorate([
+    core_1.ViewChild(body_1.DataTableBodyComponent),
+    __metadata("design:type", body_1.DataTableBodyComponent)
+], DatatableComponent.prototype, "bodyComponent", void 0);
+__decorate([
+    core_1.HostListener('window:resize'),
+    utils_1.throttleable(5),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], DatatableComponent.prototype, "onWindowResize", null);
+DatatableComponent = __decorate([
+    core_1.Component({
+        selector: 'ngx-datatable',
+        template: "\n    <div\n      visibilityObserver\n      (visible)=\"recalculate()\">\n      <datatable-header\n        *ngIf=\"headerHeight\"\n        [sorts]=\"sorts\"\n        [sortType]=\"sortType\"\n        [scrollbarH]=\"scrollbarH\"\n        [innerWidth]=\"innerWidth\"\n        [offsetX]=\"offsetX\"\n        [dealsWithGroup]=\"groupedRows\"\n        [columns]=\"_internalColumns\"\n        [headerHeight]=\"headerHeight\"\n        [reorderable]=\"reorderable\"\n        [sortAscendingIcon]=\"cssClasses.sortAscending\"\n        [sortDescendingIcon]=\"cssClasses.sortDescending\"\n        [allRowsSelected]=\"allRowsSelected\"\n        [selectionType]=\"selectionType\"\n        (sort)=\"onColumnSort($event)\"\n        (resize)=\"onColumnResize($event)\"\n        (reorder)=\"onColumnReorder($event)\"\n        (select)=\"onHeaderSelect($event)\"\n        (columnContextmenu)=\"onColumnContextmenu($event)\">\n      </datatable-header>\n      <datatable-body\n        [groupRowsBy]=\"groupRowsBy\"\n        [groupedRows]=\"groupedRows\"\n        [rows]=\"_internalRows\"\n        [groupExpansionDefault]=\"groupExpansionDefault\"\n        [scrollbarV]=\"scrollbarV\"\n        [scrollbarH]=\"scrollbarH\"\n        [loadingIndicator]=\"loadingIndicator\"\n        [externalPaging]=\"externalPaging\"\n        [rowHeight]=\"rowHeight\"\n        [rowCount]=\"rowCount\"\n        [offset]=\"offset\"\n        [trackByProp]=\"trackByProp\"\n        [columns]=\"_internalColumns\"\n        [pageSize]=\"pageSize\"\n        [offsetX]=\"offsetX\"\n        [rowDetail]=\"rowDetail\"\n        [groupHeader]=\"groupHeader\"\n        [selected]=\"selected\"\n        [innerWidth]=\"innerWidth\"\n        [bodyHeight]=\"bodyHeight\"\n        [selectionType]=\"selectionType\"\n        [emptyMessage]=\"messages.emptyMessage\"\n        [rowIdentity]=\"rowIdentity\"\n        [rowClass]=\"rowClass\"\n        [selectCheck]=\"selectCheck\"\n        (page)=\"onBodyPage($event)\"\n        (activate)=\"activate.emit($event)\"\n        (rowContextmenu)=\"onRowContextmenu($event)\"\n        (select)=\"onBodySelect($event)\"\n        (scroll)=\"onBodyScroll($event)\">\n      </datatable-body>\n      <datatable-footer\n        *ngIf=\"footerHeight\"\n        [rowCount]=\"rowCount\"\n        [pageSize]=\"pageSize\"\n        [offset]=\"offset\"\n        [footerHeight]=\"footerHeight\"\n        [footerTemplate]=\"footer\"\n        [totalMessage]=\"messages.totalMessage\"\n        [pagerLeftArrowIcon]=\"cssClasses.pagerLeftArrow\"\n        [pagerRightArrowIcon]=\"cssClasses.pagerRightArrow\"\n        [pagerPreviousIcon]=\"cssClasses.pagerPrevious\"\n        [selectedCount]=\"selected.length\"\n        [selectedMessage]=\"!!selectionType && messages.selectedMessage\"\n        [pagerNextIcon]=\"cssClasses.pagerNext\"\n        (page)=\"onFooterPage($event)\">\n      </datatable-footer>\n    </div>\n  ",
+        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+        encapsulation: core_1.ViewEncapsulation.None,
+        styles: [__webpack_require__("./src/components/datatable.component.scss")],
+        host: {
+            class: 'ngx-datatable'
+        }
+    }),
+    __metadata("design:paramtypes", [services_1.ScrollbarHelper,
+        core_1.ChangeDetectorRef,
+        core_1.ElementRef,
+        core_1.KeyValueDiffers])
+], DatatableComponent);
 exports.DatatableComponent = DatatableComponent;
 
 
@@ -4874,12 +4874,12 @@ var DataTableFooterTemplateDirective = (function () {
     function DataTableFooterTemplateDirective(template) {
         this.template = template;
     }
-    DataTableFooterTemplateDirective = __decorate([
-        core_1.Directive({ selector: '[ngx-datatable-footer-template]' }),
-        __metadata("design:paramtypes", [core_1.TemplateRef])
-    ], DataTableFooterTemplateDirective);
     return DataTableFooterTemplateDirective;
 }());
+DataTableFooterTemplateDirective = __decorate([
+    core_1.Directive({ selector: '[ngx-datatable-footer-template]' }),
+    __metadata("design:paramtypes", [core_1.TemplateRef])
+], DataTableFooterTemplateDirective);
 exports.DataTableFooterTemplateDirective = DataTableFooterTemplateDirective;
 
 
@@ -4920,70 +4920,70 @@ var DataTableFooterComponent = (function () {
         enumerable: true,
         configurable: true
     });
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableFooterComponent.prototype, "footerHeight", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableFooterComponent.prototype, "rowCount", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableFooterComponent.prototype, "pageSize", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableFooterComponent.prototype, "offset", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTableFooterComponent.prototype, "pagerLeftArrowIcon", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTableFooterComponent.prototype, "pagerRightArrowIcon", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTableFooterComponent.prototype, "pagerPreviousIcon", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTableFooterComponent.prototype, "pagerNextIcon", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTableFooterComponent.prototype, "totalMessage", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", core_1.TemplateRef)
-    ], DataTableFooterComponent.prototype, "footerTemplate", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableFooterComponent.prototype, "selectedCount", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableFooterComponent.prototype, "selectedMessage", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DataTableFooterComponent.prototype, "page", void 0);
-    DataTableFooterComponent = __decorate([
-        core_1.Component({
-            selector: 'datatable-footer',
-            template: "\n    <div\n      class=\"datatable-footer-inner\"\n      [ngClass]=\"{'selected-count': selectedMessage}\"\n      [style.height.px]=\"footerHeight\">\n      <ng-template\n        *ngIf=\"footerTemplate\"\n        [ngTemplateOutlet]=\"footerTemplate.template\"\n        [ngTemplateOutletContext]=\"{ \n          rowCount: rowCount, \n          pageSize: pageSize, \n          selectedCount: selectedCount,\n          curPage: curPage,\n          offset: offset\n        }\">\n      </ng-template>\n      <div class=\"page-count\" *ngIf=\"!footerTemplate\">\n        <span *ngIf=\"selectedMessage\">\n          {{selectedCount.toLocaleString()}} {{selectedMessage}} / \n        </span>\n        {{rowCount.toLocaleString()}} {{totalMessage}}\n      </div>\n      <datatable-pager *ngIf=\"!footerTemplate\"\n        [pagerLeftArrowIcon]=\"pagerLeftArrowIcon\"\n        [pagerRightArrowIcon]=\"pagerRightArrowIcon\"\n        [pagerPreviousIcon]=\"pagerPreviousIcon\"\n        [pagerNextIcon]=\"pagerNextIcon\"\n        [page]=\"curPage\"\n        [size]=\"pageSize\"\n        [count]=\"rowCount\"\n        [hidden]=\"!isVisible\"\n        (change)=\"page.emit($event)\">\n      </datatable-pager>\n    </div>\n  ",
-            host: {
-                class: 'datatable-footer'
-            },
-            changeDetection: core_1.ChangeDetectionStrategy.OnPush
-        })
-    ], DataTableFooterComponent);
     return DataTableFooterComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableFooterComponent.prototype, "footerHeight", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableFooterComponent.prototype, "rowCount", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableFooterComponent.prototype, "pageSize", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableFooterComponent.prototype, "offset", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DataTableFooterComponent.prototype, "pagerLeftArrowIcon", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DataTableFooterComponent.prototype, "pagerRightArrowIcon", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DataTableFooterComponent.prototype, "pagerPreviousIcon", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DataTableFooterComponent.prototype, "pagerNextIcon", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DataTableFooterComponent.prototype, "totalMessage", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", core_1.TemplateRef)
+], DataTableFooterComponent.prototype, "footerTemplate", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableFooterComponent.prototype, "selectedCount", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableFooterComponent.prototype, "selectedMessage", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DataTableFooterComponent.prototype, "page", void 0);
+DataTableFooterComponent = __decorate([
+    core_1.Component({
+        selector: 'datatable-footer',
+        template: "\n    <div\n      class=\"datatable-footer-inner\"\n      [ngClass]=\"{'selected-count': selectedMessage}\"\n      [style.height.px]=\"footerHeight\">\n      <ng-template\n        *ngIf=\"footerTemplate\"\n        [ngTemplateOutlet]=\"footerTemplate.template\"\n        [ngTemplateOutletContext]=\"{ \n          rowCount: rowCount, \n          pageSize: pageSize, \n          selectedCount: selectedCount,\n          curPage: curPage,\n          offset: offset\n        }\">\n      </ng-template>\n      <div class=\"page-count\" *ngIf=\"!footerTemplate\">\n        <span *ngIf=\"selectedMessage\">\n          {{selectedCount.toLocaleString()}} {{selectedMessage}} / \n        </span>\n        {{rowCount.toLocaleString()}} {{totalMessage}}\n      </div>\n      <datatable-pager *ngIf=\"!footerTemplate\"\n        [pagerLeftArrowIcon]=\"pagerLeftArrowIcon\"\n        [pagerRightArrowIcon]=\"pagerRightArrowIcon\"\n        [pagerPreviousIcon]=\"pagerPreviousIcon\"\n        [pagerNextIcon]=\"pagerNextIcon\"\n        [page]=\"curPage\"\n        [size]=\"pageSize\"\n        [count]=\"rowCount\"\n        [hidden]=\"!isVisible\"\n        (change)=\"page.emit($event)\">\n      </datatable-pager>\n    </div>\n  ",
+        host: {
+            class: 'datatable-footer'
+        },
+        changeDetection: core_1.ChangeDetectionStrategy.OnPush
+    })
+], DataTableFooterComponent);
 exports.DataTableFooterComponent = DataTableFooterComponent;
 
 
@@ -5009,44 +5009,44 @@ var footer_template_directive_1 = __webpack_require__("./src/components/footer/f
 var DatatableFooterDirective = (function () {
     function DatatableFooterDirective() {
     }
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DatatableFooterDirective.prototype, "footerHeight", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DatatableFooterDirective.prototype, "totalMessage", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DatatableFooterDirective.prototype, "selectedMessage", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DatatableFooterDirective.prototype, "pagerLeftArrowIcon", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DatatableFooterDirective.prototype, "pagerRightArrowIcon", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DatatableFooterDirective.prototype, "pagerPreviousIcon", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DatatableFooterDirective.prototype, "pagerNextIcon", void 0);
-    __decorate([
-        core_1.Input(),
-        core_1.ContentChild(footer_template_directive_1.DataTableFooterTemplateDirective, { read: core_1.TemplateRef }),
-        __metadata("design:type", core_1.TemplateRef)
-    ], DatatableFooterDirective.prototype, "template", void 0);
-    DatatableFooterDirective = __decorate([
-        core_1.Directive({ selector: 'ngx-datatable-footer' })
-    ], DatatableFooterDirective);
     return DatatableFooterDirective;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DatatableFooterDirective.prototype, "footerHeight", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DatatableFooterDirective.prototype, "totalMessage", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DatatableFooterDirective.prototype, "selectedMessage", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DatatableFooterDirective.prototype, "pagerLeftArrowIcon", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DatatableFooterDirective.prototype, "pagerRightArrowIcon", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DatatableFooterDirective.prototype, "pagerPreviousIcon", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DatatableFooterDirective.prototype, "pagerNextIcon", void 0);
+__decorate([
+    core_1.Input(),
+    core_1.ContentChild(footer_template_directive_1.DataTableFooterTemplateDirective, { read: core_1.TemplateRef }),
+    __metadata("design:type", core_1.TemplateRef)
+], DatatableFooterDirective.prototype, "template", void 0);
+DatatableFooterDirective = __decorate([
+    core_1.Directive({ selector: 'ngx-datatable-footer' })
+], DatatableFooterDirective);
 exports.DatatableFooterDirective = DatatableFooterDirective;
 
 
@@ -5180,53 +5180,53 @@ var DataTablePagerComponent = (function () {
         }
         return pages;
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTablePagerComponent.prototype, "pagerLeftArrowIcon", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTablePagerComponent.prototype, "pagerRightArrowIcon", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTablePagerComponent.prototype, "pagerPreviousIcon", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTablePagerComponent.prototype, "pagerNextIcon", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [Number])
-    ], DataTablePagerComponent.prototype, "size", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [Number])
-    ], DataTablePagerComponent.prototype, "count", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [Number])
-    ], DataTablePagerComponent.prototype, "page", null);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DataTablePagerComponent.prototype, "change", void 0);
-    DataTablePagerComponent = __decorate([
-        core_1.Component({
-            selector: 'datatable-pager',
-            template: "\n    <ul class=\"pager\">\n      <li [class.disabled]=\"!canPrevious()\">\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"selectPage(1)\">\n          <i class=\"{{pagerPreviousIcon}}\"></i>\n        </a>\n      </li>\n      <li [class.disabled]=\"!canPrevious()\">\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"prevPage()\">\n          <i class=\"{{pagerLeftArrowIcon}}\"></i>\n        </a>\n      </li>\n      <li\n        class=\"pages\"\n        *ngFor=\"let pg of pages\"\n        [class.active]=\"pg.number === page\">\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"selectPage(pg.number)\">\n          {{pg.text}}\n        </a>\n      </li>\n      <li [class.disabled]=\"!canNext()\">\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"nextPage()\">\n          <i class=\"{{pagerRightArrowIcon}}\"></i>\n        </a>\n      </li>\n      <li [class.disabled]=\"!canNext()\">\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"selectPage(totalPages)\">\n          <i class=\"{{pagerNextIcon}}\"></i>\n        </a>\n      </li>\n    </ul>\n  ",
-            host: {
-                class: 'datatable-pager'
-            },
-            changeDetection: core_1.ChangeDetectionStrategy.OnPush
-        })
-    ], DataTablePagerComponent);
     return DataTablePagerComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DataTablePagerComponent.prototype, "pagerLeftArrowIcon", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DataTablePagerComponent.prototype, "pagerRightArrowIcon", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DataTablePagerComponent.prototype, "pagerPreviousIcon", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DataTablePagerComponent.prototype, "pagerNextIcon", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Number])
+], DataTablePagerComponent.prototype, "size", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Number])
+], DataTablePagerComponent.prototype, "count", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Number])
+], DataTablePagerComponent.prototype, "page", null);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DataTablePagerComponent.prototype, "change", void 0);
+DataTablePagerComponent = __decorate([
+    core_1.Component({
+        selector: 'datatable-pager',
+        template: "\n    <ul class=\"pager\">\n      <li [class.disabled]=\"!canPrevious()\">\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"selectPage(1)\">\n          <i class=\"{{pagerPreviousIcon}}\"></i>\n        </a>\n      </li>\n      <li [class.disabled]=\"!canPrevious()\">\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"prevPage()\">\n          <i class=\"{{pagerLeftArrowIcon}}\"></i>\n        </a>\n      </li>\n      <li\n        class=\"pages\"\n        *ngFor=\"let pg of pages\"\n        [class.active]=\"pg.number === page\">\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"selectPage(pg.number)\">\n          {{pg.text}}\n        </a>\n      </li>\n      <li [class.disabled]=\"!canNext()\">\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"nextPage()\">\n          <i class=\"{{pagerRightArrowIcon}}\"></i>\n        </a>\n      </li>\n      <li [class.disabled]=\"!canNext()\">\n        <a\n          href=\"javascript:void(0)\"\n          (click)=\"selectPage(totalPages)\">\n          <i class=\"{{pagerNextIcon}}\"></i>\n        </a>\n      </li>\n    </ul>\n  ",
+        host: {
+            class: 'datatable-pager'
+        },
+        changeDetection: core_1.ChangeDetectionStrategy.OnPush
+    })
+], DataTablePagerComponent);
 exports.DataTablePagerComponent = DataTablePagerComponent;
 
 
@@ -5411,98 +5411,98 @@ var DataTableHeaderCellComponent = (function () {
             return "sort-btn";
         }
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTableHeaderCellComponent.prototype, "sortType", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTableHeaderCellComponent.prototype, "sortAscendingIcon", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTableHeaderCellComponent.prototype, "sortDescendingIcon", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [Object])
-    ], DataTableHeaderCellComponent.prototype, "allRowsSelected", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTableHeaderCellComponent.prototype, "selectionType", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [Object])
-    ], DataTableHeaderCellComponent.prototype, "column", null);
-    __decorate([
-        core_1.HostBinding('style.height.px'),
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableHeaderCellComponent.prototype, "headerHeight", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Array),
-        __metadata("design:paramtypes", [Array])
-    ], DataTableHeaderCellComponent.prototype, "sorts", null);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DataTableHeaderCellComponent.prototype, "sort", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DataTableHeaderCellComponent.prototype, "select", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", Object)
-    ], DataTableHeaderCellComponent.prototype, "columnContextmenu", void 0);
-    __decorate([
-        core_1.HostBinding('class'),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [])
-    ], DataTableHeaderCellComponent.prototype, "columnCssClasses", null);
-    __decorate([
-        core_1.HostBinding('attr.title'),
-        __metadata("design:type", String),
-        __metadata("design:paramtypes", [])
-    ], DataTableHeaderCellComponent.prototype, "name", null);
-    __decorate([
-        core_1.HostBinding('style.minWidth.px'),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [])
-    ], DataTableHeaderCellComponent.prototype, "minWidth", null);
-    __decorate([
-        core_1.HostBinding('style.maxWidth.px'),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [])
-    ], DataTableHeaderCellComponent.prototype, "maxWidth", null);
-    __decorate([
-        core_1.HostBinding('style.width.px'),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [])
-    ], DataTableHeaderCellComponent.prototype, "width", null);
-    __decorate([
-        core_1.HostListener('contextmenu', ['$event']),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [MouseEvent]),
-        __metadata("design:returntype", void 0)
-    ], DataTableHeaderCellComponent.prototype, "onContextmenu", null);
-    DataTableHeaderCellComponent = __decorate([
-        core_1.Component({
-            selector: 'datatable-header-cell',
-            template: "\n    <div>\n      <label\n        *ngIf=\"isCheckboxable\"\n        class=\"datatable-checkbox\">\n        <input\n          type=\"checkbox\"\n          [checked]=\"allRowsSelected\"\n          (change)=\"select.emit(!allRowsSelected)\"\n        />\n      </label>\n      <span\n        *ngIf=\"!column.headerTemplate\"\n        class=\"datatable-header-cell-wrapper\">\n        <span\n          class=\"datatable-header-cell-label draggable\"\n          (click)=\"onSort()\"\n          [innerHTML]=\"name\">\n        </span>\n      </span>\n      <ng-template\n        *ngIf=\"column.headerTemplate\"\n        [ngTemplateOutlet]=\"column.headerTemplate\"\n        [ngTemplateOutletContext]=\"cellContext\">\n      </ng-template>\n      <span\n        (click)=\"onSort()\"\n        [class]=\"sortClass\">\n      </span>\n    </div>\n  ",
-            host: {
-                class: 'datatable-header-cell'
-            },
-            changeDetection: core_1.ChangeDetectionStrategy.OnPush
-        }),
-        __metadata("design:paramtypes", [core_1.ChangeDetectorRef])
-    ], DataTableHeaderCellComponent);
     return DataTableHeaderCellComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", types_1.SortType)
+], DataTableHeaderCellComponent.prototype, "sortType", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DataTableHeaderCellComponent.prototype, "sortAscendingIcon", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], DataTableHeaderCellComponent.prototype, "sortDescendingIcon", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [Object])
+], DataTableHeaderCellComponent.prototype, "allRowsSelected", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", types_1.SelectionType)
+], DataTableHeaderCellComponent.prototype, "selectionType", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [Object])
+], DataTableHeaderCellComponent.prototype, "column", null);
+__decorate([
+    core_1.HostBinding('style.height.px'),
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableHeaderCellComponent.prototype, "headerHeight", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array),
+    __metadata("design:paramtypes", [Array])
+], DataTableHeaderCellComponent.prototype, "sorts", null);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DataTableHeaderCellComponent.prototype, "sort", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DataTableHeaderCellComponent.prototype, "select", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], DataTableHeaderCellComponent.prototype, "columnContextmenu", void 0);
+__decorate([
+    core_1.HostBinding('class'),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [])
+], DataTableHeaderCellComponent.prototype, "columnCssClasses", null);
+__decorate([
+    core_1.HostBinding('attr.title'),
+    __metadata("design:type", String),
+    __metadata("design:paramtypes", [])
+], DataTableHeaderCellComponent.prototype, "name", null);
+__decorate([
+    core_1.HostBinding('style.minWidth.px'),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [])
+], DataTableHeaderCellComponent.prototype, "minWidth", null);
+__decorate([
+    core_1.HostBinding('style.maxWidth.px'),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [])
+], DataTableHeaderCellComponent.prototype, "maxWidth", null);
+__decorate([
+    core_1.HostBinding('style.width.px'),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [])
+], DataTableHeaderCellComponent.prototype, "width", null);
+__decorate([
+    core_1.HostListener('contextmenu', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [MouseEvent]),
+    __metadata("design:returntype", void 0)
+], DataTableHeaderCellComponent.prototype, "onContextmenu", null);
+DataTableHeaderCellComponent = __decorate([
+    core_1.Component({
+        selector: 'datatable-header-cell',
+        template: "\n    <div>\n      <label\n        *ngIf=\"isCheckboxable\"\n        class=\"datatable-checkbox\">\n        <input\n          type=\"checkbox\"\n          [checked]=\"allRowsSelected\"\n          (change)=\"select.emit(!allRowsSelected)\"\n        />\n      </label>\n      <span\n        *ngIf=\"!column.headerTemplate\"\n        class=\"datatable-header-cell-wrapper\">\n        <span\n          class=\"datatable-header-cell-label draggable\"\n          (click)=\"onSort()\"\n          [innerHTML]=\"name\">\n        </span>\n      </span>\n      <ng-template\n        *ngIf=\"column.headerTemplate\"\n        [ngTemplateOutlet]=\"column.headerTemplate\"\n        [ngTemplateOutletContext]=\"cellContext\">\n      </ng-template>\n      <span\n        (click)=\"onSort()\"\n        [class]=\"sortClass\">\n      </span>\n    </div>\n  ",
+        host: {
+            class: 'datatable-header-cell'
+        },
+        changeDetection: core_1.ChangeDetectionStrategy.OnPush
+    }),
+    __metadata("design:paramtypes", [core_1.ChangeDetectorRef])
+], DataTableHeaderCellComponent);
 exports.DataTableHeaderCellComponent = DataTableHeaderCellComponent;
 
 
@@ -5689,98 +5689,98 @@ var DataTableHeaderComponent = (function () {
         }
         return styles;
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableHeaderComponent.prototype, "sortAscendingIcon", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DataTableHeaderComponent.prototype, "sortDescendingIcon", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DataTableHeaderComponent.prototype, "scrollbarH", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DataTableHeaderComponent.prototype, "dealsWithGroup", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number),
-        __metadata("design:paramtypes", [Number])
-    ], DataTableHeaderComponent.prototype, "innerWidth", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], DataTableHeaderComponent.prototype, "offsetX", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Array)
-    ], DataTableHeaderComponent.prototype, "sorts", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTableHeaderComponent.prototype, "sortType", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DataTableHeaderComponent.prototype, "allRowsSelected", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], DataTableHeaderComponent.prototype, "selectionType", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DataTableHeaderComponent.prototype, "reorderable", void 0);
-    __decorate([
-        core_1.HostBinding('style.height'),
-        core_1.Input(),
-        __metadata("design:type", Object),
-        __metadata("design:paramtypes", [Object])
-    ], DataTableHeaderComponent.prototype, "headerHeight", null);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Array),
-        __metadata("design:paramtypes", [Array])
-    ], DataTableHeaderComponent.prototype, "columns", null);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DataTableHeaderComponent.prototype, "sort", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DataTableHeaderComponent.prototype, "reorder", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DataTableHeaderComponent.prototype, "resize", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DataTableHeaderComponent.prototype, "select", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", Object)
-    ], DataTableHeaderComponent.prototype, "columnContextmenu", void 0);
-    __decorate([
-        core_1.HostBinding('style.width'),
-        __metadata("design:type", String),
-        __metadata("design:paramtypes", [])
-    ], DataTableHeaderComponent.prototype, "headerWidth", null);
-    DataTableHeaderComponent = __decorate([
-        core_1.Component({
-            selector: 'datatable-header',
-            template: "\n    <div\n      orderable\n      (reorder)=\"onColumnReordered($event)\"\n      [style.width.px]=\"columnGroupWidths.total\"\n      class=\"datatable-header-inner\">\n     \n      <div\n        *ngFor=\"let colGroup of columnsByPin; trackBy: trackByGroups\"\n        [class]=\"'datatable-row-' + colGroup.type\"\n        [ngStyle]=\"stylesByGroup(colGroup.type)\">\n        <datatable-header-cell\n          *ngFor=\"let column of colGroup.columns; trackBy: columnTrackingFn\"\n          resizeable\n          [resizeEnabled]=\"column.resizeable\"\n          (resize)=\"onColumnResized($event, column)\"\n          long-press\n          [pressModel]=\"column\"\n          [pressEnabled]=\"reorderable && column.draggable\"\n          (longPressStart)=\"onLongPressStart($event)\"\n          (longPressEnd)=\"onLongPressEnd($event)\"\n          draggable\n          [dragX]=\"reorderable && column.draggable && column.dragging\"\n          [dragY]=\"false\"\n          [dragModel]=\"column\"\n          [dragEventTarget]=\"dragEventTarget\"\n          [headerHeight]=\"headerHeight\"\n          [column]=\"column\"\n          [sortType]=\"sortType\"\n          [sorts]=\"sorts\"\n          [selectionType]=\"selectionType\"\n          [sortAscendingIcon]=\"sortAscendingIcon\"\n          [sortDescendingIcon]=\"sortDescendingIcon\"\n          [allRowsSelected]=\"allRowsSelected\"\n          (sort)=\"onSort($event)\"\n          (select)=\"select.emit($event)\"\n          (columnContextmenu)=\"columnContextmenu.emit($event)\">\n        </datatable-header-cell>\n      </div>\n    </div>\n  ",
-            host: {
-                class: 'datatable-header'
-            }
-        })
-    ], DataTableHeaderComponent);
     return DataTableHeaderComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableHeaderComponent.prototype, "sortAscendingIcon", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DataTableHeaderComponent.prototype, "sortDescendingIcon", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DataTableHeaderComponent.prototype, "scrollbarH", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DataTableHeaderComponent.prototype, "dealsWithGroup", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number),
+    __metadata("design:paramtypes", [Number])
+], DataTableHeaderComponent.prototype, "innerWidth", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], DataTableHeaderComponent.prototype, "offsetX", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array)
+], DataTableHeaderComponent.prototype, "sorts", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", types_1.SortType)
+], DataTableHeaderComponent.prototype, "sortType", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DataTableHeaderComponent.prototype, "allRowsSelected", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", types_1.SelectionType)
+], DataTableHeaderComponent.prototype, "selectionType", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DataTableHeaderComponent.prototype, "reorderable", void 0);
+__decorate([
+    core_1.HostBinding('style.height'),
+    core_1.Input(),
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [Object])
+], DataTableHeaderComponent.prototype, "headerHeight", null);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Array),
+    __metadata("design:paramtypes", [Array])
+], DataTableHeaderComponent.prototype, "columns", null);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DataTableHeaderComponent.prototype, "sort", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DataTableHeaderComponent.prototype, "reorder", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DataTableHeaderComponent.prototype, "resize", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DataTableHeaderComponent.prototype, "select", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], DataTableHeaderComponent.prototype, "columnContextmenu", void 0);
+__decorate([
+    core_1.HostBinding('style.width'),
+    __metadata("design:type", String),
+    __metadata("design:paramtypes", [])
+], DataTableHeaderComponent.prototype, "headerWidth", null);
+DataTableHeaderComponent = __decorate([
+    core_1.Component({
+        selector: 'datatable-header',
+        template: "\n    <div\n      orderable\n      (reorder)=\"onColumnReordered($event)\"\n      [style.width.px]=\"columnGroupWidths.total\"\n      class=\"datatable-header-inner\">\n     \n      <div\n        *ngFor=\"let colGroup of columnsByPin; trackBy: trackByGroups\"\n        [class]=\"'datatable-row-' + colGroup.type\"\n        [ngStyle]=\"stylesByGroup(colGroup.type)\">\n        <datatable-header-cell\n          *ngFor=\"let column of colGroup.columns; trackBy: columnTrackingFn\"\n          resizeable\n          [resizeEnabled]=\"column.resizeable\"\n          (resize)=\"onColumnResized($event, column)\"\n          long-press\n          [pressModel]=\"column\"\n          [pressEnabled]=\"reorderable && column.draggable\"\n          (longPressStart)=\"onLongPressStart($event)\"\n          (longPressEnd)=\"onLongPressEnd($event)\"\n          draggable\n          [dragX]=\"reorderable && column.draggable && column.dragging\"\n          [dragY]=\"false\"\n          [dragModel]=\"column\"\n          [dragEventTarget]=\"dragEventTarget\"\n          [headerHeight]=\"headerHeight\"\n          [column]=\"column\"\n          [sortType]=\"sortType\"\n          [sorts]=\"sorts\"\n          [selectionType]=\"selectionType\"\n          [sortAscendingIcon]=\"sortAscendingIcon\"\n          [sortDescendingIcon]=\"sortDescendingIcon\"\n          [allRowsSelected]=\"allRowsSelected\"\n          (sort)=\"onSort($event)\"\n          (select)=\"select.emit($event)\"\n          (columnContextmenu)=\"columnContextmenu.emit($event)\">\n        </datatable-header-cell>\n      </div>\n    </div>\n  ",
+        host: {
+            class: 'datatable-header'
+        }
+    })
+], DataTableHeaderComponent);
 exports.DataTableHeaderComponent = DataTableHeaderComponent;
 
 
@@ -5855,14 +5855,14 @@ var DatatableRowDetailTemplateDirective = (function () {
     function DatatableRowDetailTemplateDirective(template) {
         this.template = template;
     }
-    DatatableRowDetailTemplateDirective = __decorate([
-        core_1.Directive({
-            selector: '[ngx-datatable-row-detail-template]'
-        }),
-        __metadata("design:paramtypes", [core_1.TemplateRef])
-    ], DatatableRowDetailTemplateDirective);
     return DatatableRowDetailTemplateDirective;
 }());
+DatatableRowDetailTemplateDirective = __decorate([
+    core_1.Directive({
+        selector: '[ngx-datatable-row-detail-template]'
+    }),
+    __metadata("design:paramtypes", [core_1.TemplateRef])
+], DatatableRowDetailTemplateDirective);
 exports.DatatableRowDetailTemplateDirective = DatatableRowDetailTemplateDirective;
 
 
@@ -5924,24 +5924,24 @@ var DatatableRowDetailDirective = (function () {
             value: false
         });
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DatatableRowDetailDirective.prototype, "rowHeight", void 0);
-    __decorate([
-        core_1.Input(),
-        core_1.ContentChild(row_detail_template_directive_1.DatatableRowDetailTemplateDirective, { read: core_1.TemplateRef }),
-        __metadata("design:type", core_1.TemplateRef)
-    ], DatatableRowDetailDirective.prototype, "template", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DatatableRowDetailDirective.prototype, "toggle", void 0);
-    DatatableRowDetailDirective = __decorate([
-        core_1.Directive({ selector: 'ngx-datatable-row-detail' })
-    ], DatatableRowDetailDirective);
     return DatatableRowDetailDirective;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DatatableRowDetailDirective.prototype, "rowHeight", void 0);
+__decorate([
+    core_1.Input(),
+    core_1.ContentChild(row_detail_template_directive_1.DatatableRowDetailTemplateDirective, { read: core_1.TemplateRef }),
+    __metadata("design:type", core_1.TemplateRef)
+], DatatableRowDetailDirective.prototype, "template", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DatatableRowDetailDirective.prototype, "toggle", void 0);
+DatatableRowDetailDirective = __decorate([
+    core_1.Directive({ selector: 'ngx-datatable-row-detail' })
+], DatatableRowDetailDirective);
 exports.DatatableRowDetailDirective = DatatableRowDetailDirective;
 
 
@@ -5968,59 +5968,59 @@ var services_1 = __webpack_require__("./src/services/index.ts");
 var NgxDatatableModule = (function () {
     function NgxDatatableModule() {
     }
-    NgxDatatableModule = __decorate([
-        core_1.NgModule({
-            imports: [
-                common_1.CommonModule
-            ],
-            providers: [
-                services_1.ScrollbarHelper
-            ],
-            declarations: [
-                components_1.DataTableFooterTemplateDirective,
-                directives_1.VisibilityDirective,
-                directives_1.DraggableDirective,
-                directives_1.ResizeableDirective,
-                directives_1.OrderableDirective,
-                directives_1.LongPressDirective,
-                components_1.ScrollerComponent,
-                components_1.DatatableComponent,
-                components_1.DataTableColumnDirective,
-                components_1.DataTableHeaderComponent,
-                components_1.DataTableHeaderCellComponent,
-                components_1.DataTableBodyComponent,
-                components_1.DataTableFooterComponent,
-                components_1.DataTablePagerComponent,
-                components_1.ProgressBarComponent,
-                components_1.DataTableBodyRowComponent,
-                components_1.DataTableRowWrapperComponent,
-                components_1.DatatableRowDetailDirective,
-                components_1.DatatableGroupHeaderDirective,
-                components_1.DatatableRowDetailTemplateDirective,
-                components_1.DataTableBodyCellComponent,
-                components_1.DataTableSelectionComponent,
-                components_1.DataTableColumnHeaderDirective,
-                components_1.DataTableColumnCellDirective,
-                components_1.DatatableFooterDirective,
-                components_1.DatatableGroupHeaderTemplateDirective
-            ],
-            exports: [
-                components_1.DatatableComponent,
-                components_1.DatatableRowDetailDirective,
-                components_1.DatatableGroupHeaderDirective,
-                components_1.DatatableRowDetailTemplateDirective,
-                components_1.DataTableColumnDirective,
-                components_1.DataTableColumnHeaderDirective,
-                components_1.DataTableColumnCellDirective,
-                components_1.DataTableFooterTemplateDirective,
-                components_1.DatatableFooterDirective,
-                components_1.DataTablePagerComponent,
-                components_1.DatatableGroupHeaderTemplateDirective
-            ]
-        })
-    ], NgxDatatableModule);
     return NgxDatatableModule;
 }());
+NgxDatatableModule = __decorate([
+    core_1.NgModule({
+        imports: [
+            common_1.CommonModule
+        ],
+        providers: [
+            services_1.ScrollbarHelper
+        ],
+        declarations: [
+            components_1.DataTableFooterTemplateDirective,
+            directives_1.VisibilityDirective,
+            directives_1.DraggableDirective,
+            directives_1.ResizeableDirective,
+            directives_1.OrderableDirective,
+            directives_1.LongPressDirective,
+            components_1.ScrollerComponent,
+            components_1.DatatableComponent,
+            components_1.DataTableColumnDirective,
+            components_1.DataTableHeaderComponent,
+            components_1.DataTableHeaderCellComponent,
+            components_1.DataTableBodyComponent,
+            components_1.DataTableFooterComponent,
+            components_1.DataTablePagerComponent,
+            components_1.ProgressBarComponent,
+            components_1.DataTableBodyRowComponent,
+            components_1.DataTableRowWrapperComponent,
+            components_1.DatatableRowDetailDirective,
+            components_1.DatatableGroupHeaderDirective,
+            components_1.DatatableRowDetailTemplateDirective,
+            components_1.DataTableBodyCellComponent,
+            components_1.DataTableSelectionComponent,
+            components_1.DataTableColumnHeaderDirective,
+            components_1.DataTableColumnCellDirective,
+            components_1.DatatableFooterDirective,
+            components_1.DatatableGroupHeaderTemplateDirective
+        ],
+        exports: [
+            components_1.DatatableComponent,
+            components_1.DatatableRowDetailDirective,
+            components_1.DatatableGroupHeaderDirective,
+            components_1.DatatableRowDetailTemplateDirective,
+            components_1.DataTableColumnDirective,
+            components_1.DataTableColumnHeaderDirective,
+            components_1.DataTableColumnCellDirective,
+            components_1.DataTableFooterTemplateDirective,
+            components_1.DatatableFooterDirective,
+            components_1.DataTablePagerComponent,
+            components_1.DatatableGroupHeaderTemplateDirective
+        ]
+    })
+], NgxDatatableModule);
 exports.NgxDatatableModule = NgxDatatableModule;
 
 
@@ -6128,40 +6128,40 @@ var DraggableDirective = (function () {
             this.subscription = undefined;
         }
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DraggableDirective.prototype, "dragEventTarget", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], DraggableDirective.prototype, "dragModel", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DraggableDirective.prototype, "dragX", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], DraggableDirective.prototype, "dragY", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DraggableDirective.prototype, "dragStart", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DraggableDirective.prototype, "dragging", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], DraggableDirective.prototype, "dragEnd", void 0);
-    DraggableDirective = __decorate([
-        core_1.Directive({ selector: '[draggable]' }),
-        __metadata("design:paramtypes", [core_1.ElementRef])
-    ], DraggableDirective);
     return DraggableDirective;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DraggableDirective.prototype, "dragEventTarget", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], DraggableDirective.prototype, "dragModel", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DraggableDirective.prototype, "dragX", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], DraggableDirective.prototype, "dragY", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DraggableDirective.prototype, "dragStart", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DraggableDirective.prototype, "dragging", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], DraggableDirective.prototype, "dragEnd", void 0);
+DraggableDirective = __decorate([
+    core_1.Directive({ selector: '[draggable]' }),
+    __metadata("design:paramtypes", [core_1.ElementRef])
+], DraggableDirective);
 exports.DraggableDirective = DraggableDirective;
 
 
@@ -6295,51 +6295,51 @@ var LongPressDirective = (function () {
             this.subscription = undefined;
         }
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], LongPressDirective.prototype, "pressEnabled", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], LongPressDirective.prototype, "pressModel", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], LongPressDirective.prototype, "duration", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], LongPressDirective.prototype, "longPressStart", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], LongPressDirective.prototype, "longPressing", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], LongPressDirective.prototype, "longPressEnd", void 0);
-    __decorate([
-        core_1.HostBinding('class.press'),
-        __metadata("design:type", Boolean),
-        __metadata("design:paramtypes", [])
-    ], LongPressDirective.prototype, "press", null);
-    __decorate([
-        core_1.HostBinding('class.longpress'),
-        __metadata("design:type", Boolean),
-        __metadata("design:paramtypes", [])
-    ], LongPressDirective.prototype, "isLongPress", null);
-    __decorate([
-        core_1.HostListener('mousedown', ['$event']),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [MouseEvent]),
-        __metadata("design:returntype", void 0)
-    ], LongPressDirective.prototype, "onMouseDown", null);
-    LongPressDirective = __decorate([
-        core_1.Directive({ selector: '[long-press]' })
-    ], LongPressDirective);
     return LongPressDirective;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], LongPressDirective.prototype, "pressEnabled", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], LongPressDirective.prototype, "pressModel", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], LongPressDirective.prototype, "duration", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], LongPressDirective.prototype, "longPressStart", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], LongPressDirective.prototype, "longPressing", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], LongPressDirective.prototype, "longPressEnd", void 0);
+__decorate([
+    core_1.HostBinding('class.press'),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [])
+], LongPressDirective.prototype, "press", null);
+__decorate([
+    core_1.HostBinding('class.longpress'),
+    __metadata("design:type", Boolean),
+    __metadata("design:paramtypes", [])
+], LongPressDirective.prototype, "isLongPress", null);
+__decorate([
+    core_1.HostListener('mousedown', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [MouseEvent]),
+    __metadata("design:returntype", void 0)
+], LongPressDirective.prototype, "onMouseDown", null);
+LongPressDirective = __decorate([
+    core_1.Directive({ selector: '[long-press]' })
+], LongPressDirective);
 exports.LongPressDirective = LongPressDirective;
 
 
@@ -6466,21 +6466,21 @@ var OrderableDirective = (function () {
             return acc;
         }, {});
     };
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], OrderableDirective.prototype, "reorder", void 0);
-    __decorate([
-        core_1.ContentChildren(draggable_directive_1.DraggableDirective, { descendants: true }),
-        __metadata("design:type", core_1.QueryList)
-    ], OrderableDirective.prototype, "draggables", void 0);
-    OrderableDirective = __decorate([
-        core_1.Directive({ selector: '[orderable]' }),
-        __param(1, core_1.Inject(platform_browser_1.DOCUMENT)),
-        __metadata("design:paramtypes", [core_1.KeyValueDiffers, Object])
-    ], OrderableDirective);
     return OrderableDirective;
 }());
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], OrderableDirective.prototype, "reorder", void 0);
+__decorate([
+    core_1.ContentChildren(draggable_directive_1.DraggableDirective, { descendants: true }),
+    __metadata("design:type", core_1.QueryList)
+], OrderableDirective.prototype, "draggables", void 0);
+OrderableDirective = __decorate([
+    core_1.Directive({ selector: '[orderable]' }),
+    __param(1, core_1.Inject(platform_browser_1.DOCUMENT)),
+    __metadata("design:paramtypes", [core_1.KeyValueDiffers, Object])
+], OrderableDirective);
 exports.OrderableDirective = OrderableDirective;
 
 
@@ -6560,39 +6560,39 @@ var ResizeableDirective = (function () {
             this.subscription = undefined;
         }
     };
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
-    ], ResizeableDirective.prototype, "resizeEnabled", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], ResizeableDirective.prototype, "minWidth", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], ResizeableDirective.prototype, "maxWidth", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], ResizeableDirective.prototype, "resize", void 0);
-    __decorate([
-        core_1.HostListener('mousedown', ['$event']),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [MouseEvent]),
-        __metadata("design:returntype", void 0)
-    ], ResizeableDirective.prototype, "onMousedown", null);
-    ResizeableDirective = __decorate([
-        core_1.Directive({
-            selector: '[resizeable]',
-            host: {
-                '[class.resizeable]': 'resizeEnabled'
-            }
-        }),
-        __metadata("design:paramtypes", [core_1.ElementRef])
-    ], ResizeableDirective);
     return ResizeableDirective;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Boolean)
+], ResizeableDirective.prototype, "resizeEnabled", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], ResizeableDirective.prototype, "minWidth", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], ResizeableDirective.prototype, "maxWidth", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], ResizeableDirective.prototype, "resize", void 0);
+__decorate([
+    core_1.HostListener('mousedown', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [MouseEvent]),
+    __metadata("design:returntype", void 0)
+], ResizeableDirective.prototype, "onMousedown", null);
+ResizeableDirective = __decorate([
+    core_1.Directive({
+        selector: '[resizeable]',
+        host: {
+            '[class.resizeable]': 'resizeEnabled'
+        }
+    }),
+    __metadata("design:paramtypes", [core_1.ElementRef])
+], ResizeableDirective);
 exports.ResizeableDirective = ResizeableDirective;
 
 
@@ -6664,20 +6664,20 @@ var VisibilityDirective = (function () {
         };
         this.timeout = setTimeout(function () { return check(); });
     };
-    __decorate([
-        core_1.HostBinding('class.visible'),
-        __metadata("design:type", Boolean)
-    ], VisibilityDirective.prototype, "isVisible", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], VisibilityDirective.prototype, "visible", void 0);
-    VisibilityDirective = __decorate([
-        core_1.Directive({ selector: '[visibilityObserver]' }),
-        __metadata("design:paramtypes", [core_1.ElementRef, core_1.NgZone])
-    ], VisibilityDirective);
     return VisibilityDirective;
 }());
+__decorate([
+    core_1.HostBinding('class.visible'),
+    __metadata("design:type", Boolean)
+], VisibilityDirective.prototype, "isVisible", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], VisibilityDirective.prototype, "visible", void 0);
+VisibilityDirective = __decorate([
+    core_1.Directive({ selector: '[visibilityObserver]' }),
+    __metadata("design:paramtypes", [core_1.ElementRef, core_1.NgZone])
+], VisibilityDirective);
 exports.VisibilityDirective = VisibilityDirective;
 
 
@@ -6757,13 +6757,13 @@ var ScrollbarHelper = (function () {
         outer.parentNode.removeChild(outer);
         return widthNoScroll - widthWithScroll;
     };
-    ScrollbarHelper = __decorate([
-        core_1.Injectable(),
-        __param(0, core_1.Inject(platform_browser_1.DOCUMENT)),
-        __metadata("design:paramtypes", [Object])
-    ], ScrollbarHelper);
     return ScrollbarHelper;
 }());
+ScrollbarHelper = __decorate([
+    core_1.Injectable(),
+    __param(0, core_1.Inject(platform_browser_1.DOCUMENT)),
+    __metadata("design:paramtypes", [Object])
+], ScrollbarHelper);
 exports.ScrollbarHelper = ScrollbarHelper;
 
 
@@ -6775,11 +6775,14 @@ exports.ScrollbarHelper = ScrollbarHelper;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var ClickType;
-(function (ClickType) {
-    ClickType["single"] = "single";
-    ClickType["double"] = "double";
-})(ClickType = exports.ClickType || (exports.ClickType = {}));
+var ClickType = (function () {
+    function ClickType() {
+    }
+    return ClickType;
+}());
+ClickType.single = 'single';
+ClickType.double = 'double';
+exports.ClickType = ClickType;
 
 
 /***/ }),
@@ -6790,12 +6793,15 @@ var ClickType;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var ColumnMode;
-(function (ColumnMode) {
-    ColumnMode["standard"] = "standard";
-    ColumnMode["flex"] = "flex";
-    ColumnMode["force"] = "force";
-})(ColumnMode = exports.ColumnMode || (exports.ColumnMode = {}));
+var ColumnMode = (function () {
+    function ColumnMode() {
+    }
+    return ColumnMode;
+}());
+ColumnMode.standard = 'standard';
+ColumnMode.flex = 'flex';
+ColumnMode.force = 'force';
+exports.ColumnMode = ColumnMode;
 
 
 /***/ }),
@@ -6806,11 +6812,14 @@ var ColumnMode;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var ContextmenuType;
-(function (ContextmenuType) {
-    ContextmenuType["header"] = "header";
-    ContextmenuType["body"] = "body";
-})(ContextmenuType = exports.ContextmenuType || (exports.ContextmenuType = {}));
+var ContextmenuType = (function () {
+    function ContextmenuType() {
+    }
+    return ContextmenuType;
+}());
+ContextmenuType.header = 'header';
+ContextmenuType.body = 'body';
+exports.ContextmenuType = ContextmenuType;
 
 
 /***/ }),
@@ -6840,14 +6849,17 @@ __export(__webpack_require__("./src/types/contextmenu.type.ts"));
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var SelectionType;
-(function (SelectionType) {
-    SelectionType["single"] = "single";
-    SelectionType["multi"] = "multi";
-    SelectionType["multiClick"] = "multiClick";
-    SelectionType["cell"] = "cell";
-    SelectionType["checkbox"] = "checkbox";
-})(SelectionType = exports.SelectionType || (exports.SelectionType = {}));
+var SelectionType = (function () {
+    function SelectionType() {
+    }
+    return SelectionType;
+}());
+SelectionType.single = 'single';
+SelectionType.multi = 'multi';
+SelectionType.multiClick = 'multiClick';
+SelectionType.cell = 'cell';
+SelectionType.checkbox = 'checkbox';
+exports.SelectionType = SelectionType;
 
 
 /***/ }),
@@ -6858,11 +6870,14 @@ var SelectionType;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var SortDirection;
-(function (SortDirection) {
-    SortDirection["asc"] = "asc";
-    SortDirection["desc"] = "desc";
-})(SortDirection = exports.SortDirection || (exports.SortDirection = {}));
+var SortDirection = (function () {
+    function SortDirection() {
+    }
+    return SortDirection;
+}());
+SortDirection.asc = 'asc';
+SortDirection.desc = 'desc';
+exports.SortDirection = SortDirection;
 
 
 /***/ }),
@@ -6873,11 +6888,14 @@ var SortDirection;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var SortType;
-(function (SortType) {
-    SortType["single"] = "single";
-    SortType["multi"] = "multi";
-})(SortType = exports.SortType || (exports.SortType = {}));
+var SortType = (function () {
+    function SortType() {
+    }
+    return SortType;
+}());
+SortType.single = 'single';
+SortType.multi = 'multi';
+exports.SortType = SortType;
 
 
 /***/ }),
